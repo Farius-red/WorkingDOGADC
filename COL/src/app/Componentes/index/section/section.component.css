@@ -1,0 +1,25 @@
+.carbody button{
+	cursor: pointer;
+	background: var(--fondo-botones);
+}
+.carbody button:hover{
+	background: var(--hover-botones);
+}
+.carbody{
+	padding:15%;
+
+}
+.card:hover{
+	 box-shadow: 10px 11px 13px -1px rgba(0,0,0,0.75);
+}
+.carbody:hover{
+	visibility: visible;
+	color: aliceblue;
+	background: black;
+	display: inline-block;
+	margin: 10%;
+	padding: 10%;
+	z-index: 5;
+	 box-shadow: 10px 11px 13px -1px rgba(0,0,0,0.75);
+
+}

@@ -1,0 +1,53 @@
+
+
+/* nav */
+
+
+.Header ul ,ol {
+	list-style: none;
+}
+.nave li a{
+	list-style: none;
+    color: white;
+	text-decoration: none;
+	display: block;
+	background: black;
+	padding: 10px 15px;
+}
+.nave li a:hover{
+	background-color: darkgray;
+
+}
+.nave li ul {
+  display: none;
+  list-style: none;
+}
+.nave li:hover> ul{
+	display:block;
+}
+main{
+	margin-top: 35%;
+}
+footer{
+	width: auto;
+}
+.MYC{
+	margin-top: 40%;
+}
+@media screen and (min-width: 700px) {
+    .MYC{
+		margin-top: 20%;
+	    }
+
+	        main{
+		  margin-top: 20%;
+        }
+      }
+@media screen and (min-width: 992px) {
+	.MYC{
+		margin-top: 10%;
+	}
+	main{
+		margin-top: 15%;
+  }
+}
