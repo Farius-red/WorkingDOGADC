@@ -1,0 +1,10 @@
+.root {
+    --fondo-color: #33CEFF;
+}
+
+.menulateral {
+    height: 100%;
+    width: 30%;
+    background-color: #33ceff;
+    margin: 0%;
+}
