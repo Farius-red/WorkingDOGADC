@@ -7,15 +7,20 @@ import { AppComponent } from './app.component';
 //index componentes
 import { HeaderComponent } from './index/componentes/header/header.component';
 import { BodyComponent } from './index/componentes/body/body.component';
-import { FooterComponent } from './index/componentes/footer/footer.component';
+
 import { SectionComponent } from './index/componentes/section/section.component';
 import { InicioComponent } from './index/componentes/inicio/inicio.component';
 
 
 //plantilla component
-import { PantillaModulosComponent } from './index/modulos.plantilla/pantilla-modulos/pantilla-modulos.component';
-import { MHeaderComponent } from './index/modulos.plantilla/header/header.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+//modulos
+import { SharedModule } from './shared/shared.module';
+import { SharedZigmaModule } from './sharedZigmaInflables/shared-zigma.module';
+import { CoreModule } from './core/modules/core.module';
+import { FooterWorkingDComponent } from './index/componentes/footer/footer.workingD.component';
 
 
 
@@ -27,20 +32,20 @@ import { MHeaderComponent } from './index/modulos.plantilla/header/header.compon
     
     HeaderComponent,
     BodyComponent,
-    FooterComponent,
     SectionComponent,
     InicioComponent,
-
-    // plantilla modulos
-    
-       PantillaModulosComponent,
-       MHeaderComponent,
-      
-   
+    FooterWorkingDComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+
+    //modulos
+    CoreModule,
+    BrowserAnimationsModule,
+    SharedModule,
+    SharedZigmaModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
