@@ -61,21 +61,21 @@ p {
 }
 
 #mainNav {
-    background-color: var(--color-zigma);
+    background-color: rgba(47, 23, 15, 0.9);
     font-family: 'Raleway';
 }
 
 #mainNav .navbar-brand {
-    color: var(--color-textoxZigma);
+    color: #e6a756;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
-    color: rgba(8, 7, 7, 0.7);
+    color: rgba(255, 255, 255, 0.7);
     font-weight: 800;
 }
 
 #mainNav .navbar-nav .nav-item.active .nav-link {
-    color: var(--color-textosZigma);
+    color: #e6a756;
 }
 
 @media (min-width: 992px) {
@@ -83,10 +83,10 @@ p {
         font-size: 0.9rem;
     }
     #mainNav .navbar-nav .nav-item .nav-link:hover {
-        color: rgba(180, 2, 2, 0.4);
+        color: rgba(255, 255, 255, 0.4);
     }
     #mainNav .navbar-nav .nav-item.active .nav-link:hover {
-        color: var(--color-textosZigma);
+        color: #e6a756;
     }
 }
 
@@ -197,7 +197,7 @@ p {
 
 .list-hours .list-hours-item.today {
     font-weight: bold;
-    color: var(--color-textosZigma);
+    color: #e6a756;
 }
 
 @media (min-width: 992px) {
@@ -211,12 +211,16 @@ p {
     font-size: 1.2rem;
 }
 
+.footer {
+    background-color: rgba(47, 23, 15, 0.9);
+}
+
 .text-primary {
-    color: var(--color-textosZigma) !important;
+    color: #e6a756 !important;
 }
 
 .bg-primary {
-    background-color: var(--color-textosZigma) !important;
+    background-color: #e6a756 !important;
 }
 
 .btn {
@@ -224,8 +228,8 @@ p {
 }
 
 .btn-primary {
-    background-color: var(--color-textosZigma);
-    border-color: var(--color-textosZigma);
+    background-color: #e6a756;
+    border-color: #e6a756;
 }
 
 .btn-primary:hover,

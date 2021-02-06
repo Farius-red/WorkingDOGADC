@@ -18,8 +18,6 @@ import { NavModulosWorkingComponent } from './modulos/componentes/nav-modulos-wo
       LayoutModule,
       MaterialModule,
       RouterModule
-   
-   
   ]
 })
 export class SharedModule { }

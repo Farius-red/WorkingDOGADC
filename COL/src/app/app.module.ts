@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,13 +14,17 @@ import { InicioComponent } from './index/componentes/inicio/inicio.component';
 
 //plantilla component
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FooterWorkingDComponent } from './index/componentes/footer/footer.workingD.component';
 
 //modulos
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { SharedZigmaModule } from './sharedZigmaInflables/shared-zigma.module';
 import { CoreModule } from './core/modules/core.module';
-import { FooterWorkingDComponent } from './index/componentes/footer/footer.workingD.component';
+import { IndexZigmaModule } from './indexZigmainflables/index-zigma.module';
+import { BrowserModule } from '@angular/platform-browser';
+
+
 
 
 
@@ -34,7 +38,8 @@ import { FooterWorkingDComponent } from './index/componentes/footer/footer.worki
     BodyComponent,
     SectionComponent,
     InicioComponent,
-    FooterWorkingDComponent
+    FooterWorkingDComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -45,6 +50,9 @@ import { FooterWorkingDComponent } from './index/componentes/footer/footer.worki
     BrowserAnimationsModule,
     SharedModule,
     SharedZigmaModule,
+   
+    IndexZigmaModule
+
 
   ],
   providers: [],

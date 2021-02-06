@@ -1,59 +1,73 @@
-
 /* cabecera*/
 
-#cabecera{
-	height: 60px;
-	-webkit-box-shadow: 14px 10px 23px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 14px 10px 23px 0px rgba(0,0,0,0.75);
-  box-shadow: 14px 10px 23px 0px rgba(0,0,0,0.75);
-	background: #fff;
-  text-align: center;
+:root {
+    /* colores zigma */
+    --color-zigma: rgba(255, 255, 0, 0.9);
+    --color-textosZigma: #EF6C00;
 }
 
-#cabecera a i{
-  margin: 22px 15px;
-  color: #000;
+.Spam {
+    color: var(--color-textosZigma);
 }
 
-#cabecera a i:hover{
-  color: #0275D8;
-  cursor: pointer;
-  transition: 1s;
+#cabecera {
+    height: 60px;
+    -webkit-box-shadow: 14px 10px 23px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 14px 10px 23px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 14px 10px 23px 0px rgba(0, 0, 0, 0.75);
+    background: #fff;
+    text-align: center;
 }
 
+#cabecera a i {
+    margin: 22px 15px;
+    color: #000;
+}
+
+#cabecera a i:hover {
+    color: #0275D8;
+    cursor: pointer;
+    transition: 1s;
+}
 
 .featurette-divider {
-	margin: 5rem 0;
-	background: #777777;
+    margin: 5rem 0;
+    background: #0f0bd4;
 }
 
 .featurette-heading {
-	font-weight: 300;
-	line-height: 1;
-	letter-spacing: -.05rem;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.05rem;
 }
 
-
-.botonverde{
-  background-color:  #1AB394;
-  color: #fff;
+.botonverde {
+    background-color: #1AB394;
+    color: #fff;
 }
 
-.botonverde:hover{
-  background: #00897B;
-  transition: 1s;
+.botonverde:hover {
+    background: #00897B;
+    transition: 1s;
 }
 
-.botonNaranja{
-  background-color: #EF6C00;
-  color: #fff;
+.botonNaranja {
+    background-color: #EF6C00;
+    color: #fff;
 }
 
-.botonNaranja:hover{
-  background: #FFEA00;
-  color: #000;
-  transition: 1s;
+.botonNaranja:hover {
+    background: #FFEA00;
+    color: #000;
+    transition: 1s;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

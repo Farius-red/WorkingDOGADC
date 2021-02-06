@@ -10,13 +10,19 @@ import { InicioComponent } from './index/componentes/inicio/inicio.component';
 
 
 
+
 const routes: Routes = [
+  
+  
+  {
+    path: 'Zigmainflables', 
+    loadChildren: ()=> import('./indexZigmainflables/index-zigma.module')
+    .then(m => m.IndexZigmaModule)
+  },
   
   {
     path : 'WorkingDogADC' , component : InicioComponent
   },
- 
-  
 ];
 
 @NgModule({
