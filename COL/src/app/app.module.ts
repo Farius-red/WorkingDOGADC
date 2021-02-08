@@ -1,3 +1,4 @@
+import { BrowserModule } from '@angular/platform-browser';
 
 import { NgModule } from '@angular/core';
 
@@ -22,7 +23,6 @@ import { SharedModule } from './shared/shared.module';
 import { SharedZigmaModule } from './sharedZigmaInflables/shared-zigma.module';
 import { CoreModule } from './core/modules/core.module';
 import { IndexZigmaModule } from './indexZigmainflables/index-zigma.module';
-import { BrowserModule } from '@angular/platform-browser';
 
 
 
@@ -44,14 +44,16 @@ import { BrowserModule } from '@angular/platform-browser';
   imports: [
     BrowserModule,
     AppRoutingModule,
+  
 
     //modulos
+    IndexZigmaModule,
     CoreModule,
     BrowserAnimationsModule,
     SharedModule,
     SharedZigmaModule,
    
-    IndexZigmaModule
+    
 
 
   ],

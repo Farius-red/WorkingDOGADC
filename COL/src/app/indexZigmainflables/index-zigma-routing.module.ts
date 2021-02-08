@@ -1,5 +1,7 @@
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CommonModule } from '@angular/common';
+
 
 // index componentes
 import { TiendaComponent } from './index/componentes/tienda/tienda.component';
@@ -40,7 +42,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [
+    
+    RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class IndexZigmaRoutingModule { }

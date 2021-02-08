@@ -5,16 +5,8 @@ import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/fire
 import { Observable } from 'rxjs';
 import { Timestamp } from 'rxjs/internal/operators/timestamp';
 import { map } from 'rxjs/operators';
+import { Producto } from './modelos/productos/productosZigma.model';
 
-
-
-export interface Producto{
-  Descripcion: string;
-  NombreProducto:string;
-  color:string;
-  medidas:string;
-  precio:number;
-}
 
 
 @Injectable({

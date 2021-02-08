@@ -1,6 +1,7 @@
-import { CommonModule } from '@angular/common';
+
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 
 import { IndexZigmaRoutingModule } from './index-zigma-routing.module';
@@ -28,7 +29,9 @@ import { RegistroUsuZigmaComponent } from './index/componentes/registro-usu-zigm
 import { NosotrosZigmaComponent } from './index/componentes/nosotros-zigma/nosotros-zigma.component';
 import { LayoutIndexZigmaComponent } from './index/componentes/layout-index-zigma/layout-index-zigma.component';
 import { SharedZigmaModule } from '../sharedZigmaInflables/shared-zigma.module';
-import { BrowserModule } from '@angular/platform-browser';
+import { TiendaComponent } from './index/componentes/tienda/tienda.component';
+import { ProductosEcuComponent } from './index/componentes/tienda/Productos/productos-ecu/productos-ecu.component';
+
 
 
 
@@ -41,10 +44,12 @@ import { BrowserModule } from '@angular/platform-browser';
     RegistroUsuZigmaComponent, 
     NosotrosZigmaComponent,
     LayoutIndexZigmaComponent,
+    TiendaComponent,
+    ProductosEcuComponent,
      ],
   imports: [
 
-    CommonModule,
+   CommonModule,
     RouterModule,
     IndexZigmaRoutingModule,
     //fire base

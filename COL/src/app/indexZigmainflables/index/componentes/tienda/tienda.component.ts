@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Producto, ProductosService } from '../../../../core/servicios/Zigmainflables/productos/productos.service';
-
 
 @Component({
   selector: 'app-tienda',
@@ -9,14 +7,10 @@ import { Producto, ProductosService } from '../../../../core/servicios/Zigmainfl
 })
 export class TiendaComponent implements OnInit {
 
-  productos: any;
+  
 
-  constructor( private conexcionProductos : ProductosService) { 
+  constructor( ) { 
 
-    this.conexcionProductos.listaProductos().subscribe(producto => {
-      this.productos = producto;
-      console.log(this.productos);
-   });
     
   }
 
