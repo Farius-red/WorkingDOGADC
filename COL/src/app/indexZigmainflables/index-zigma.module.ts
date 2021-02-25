@@ -31,6 +31,7 @@ import { LayoutIndexZigmaComponent } from './index/componentes/layout-index-zigm
 import { SharedZigmaModule } from '../sharedZigmaInflables/shared-zigma.module';
 import { TiendaComponent } from './index/componentes/tienda/tienda.component';
 import { ProductosEcuComponent } from './index/componentes/tienda/Productos/productos-ecu/productos-ecu.component';
+import { DetalleProductZigmaComponent } from './index/componentes/tienda/Productos/detalle-product-zigma/detalle-product-zigma.component';
 
 
 
@@ -46,6 +47,7 @@ import { ProductosEcuComponent } from './index/componentes/tienda/Productos/prod
     LayoutIndexZigmaComponent,
     TiendaComponent,
     ProductosEcuComponent,
+    DetalleProductZigmaComponent,
      ],
   imports: [
 
