@@ -1,16 +1,18 @@
 <div class="col-lg-4 col-md-6 mb-4" *ngFor="let item of productos">
     <div class="card h-100">
-        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+        <a href="#"><img class="card-img-top" [src]="item.imagen" [alt]="item.nombreProducto"></a>
         <div class="card-body">
             <h4 class="card-title">
                 {{item.NombreProducto}}
             </h4>
-            <h5>{{item.precio}}</h5>
+            <h5>{{item.precio}}- {{item.id}}</h5>
             <p class="card-text">{{item.Descripcion}}</p>
             <p class="card-text">{{item.medidas}}</p>
         </div>
         <div class="card-footer">
-            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+           <button  type="button" (click)="addCard()" class="btn btn-primary">Agregar carrito</button>
         </div>
     </div>
 </div>
+ <br>
+
