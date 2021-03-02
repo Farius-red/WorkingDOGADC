@@ -24,19 +24,27 @@
                             "src/assets"
                         ],
                         "styles": [
-                           "src/assets/css/adminlte.min.css",
+                           "src/assets/admin/css/AdminLTE.min.css",
+                           "src/assets/admin/skins/_all-skins.min.css",
+                           "src/assets/admin/css/custom.css",
                             "src/custom-theme.scss",
                             "src/styles.css",
-                            "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+                            "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+                            "src/assets/font-awesome/css/font-awesome.min.css"
+
 
 
                         ],
                         "scripts": [
+                             "src/assets/admin/js/jquery-3.3.1.min.js",
                             "./node_modules/jquery/dist/jquery.min.js",
                             "./node_modules/@popperjs/core/dist/umd/popper.min.js",
                             "./node_modules/bootstrap/dist/js/bootstrap.min.js",
                             "src/assets/admin/js/bootstrap.bundle.min.js",
-                            "src/assets/admin/js/adminlte.min.js"
+                            "src/assets/admin/js/adminlte.min.js",
+                            "src/assets/cKeditor/ckeditor.js",
+                            "src/assets/admin/js/demo.js",
+                            "src/assets/admin/js/main.js"
 
 
                         ]

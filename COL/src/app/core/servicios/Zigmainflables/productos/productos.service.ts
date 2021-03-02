@@ -39,4 +39,10 @@ export class ProductosService {
   agregarProductos(producto: Producto) {
     this.productosCollection.add(producto);
   }
+
+
+  // tslint:disable-next-line:typedef
+ getProductosID(){
+   this.productosCollection.get();
+ }
 }

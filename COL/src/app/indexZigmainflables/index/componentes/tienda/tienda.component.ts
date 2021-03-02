@@ -11,7 +11,7 @@ export class TiendaComponent implements OnInit {
   ngOnInit(): void {}
 
   // tslint:disable-next-line:typedef
-  productoAdd(id: number){
+  productoAdd(id: string){
     console.log('product');
     console.log(id);
   }

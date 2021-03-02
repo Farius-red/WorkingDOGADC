@@ -5,59 +5,50 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-//index componentes
+// index componentes
 import { HeaderComponent } from './index/componentes/header/header.component';
 import { BodyComponent } from './index/componentes/body/body.component';
 
 import { SectionComponent } from './index/componentes/section/section.component';
 import { InicioComponent } from './index/componentes/inicio/inicio.component';
 
-
-//plantilla component
+// plantilla component
 
 import { FooterWorkingDComponent } from './index/componentes/footer/footer.workingD.component';
 
-//modulos
+// modulos
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { SharedZigmaModule } from './sharedZigmaInflables/shared-zigma.module';
 import { CoreModule } from './core/modules/core.module';
 import { IndexZigmaModule } from './indexZigmainflables/index-zigma.module';
-
-
-
-
-
+import { AdminZigmaModule } from './admin-zigma/admin-zigma.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    //index
-    
+    // index
+
     HeaderComponent,
     BodyComponent,
     SectionComponent,
     InicioComponent,
     FooterWorkingDComponent,
-    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-  
-
-    //modulos
-    IndexZigmaModule,
-    CoreModule,
     BrowserAnimationsModule,
+
+    CoreModule,
     SharedModule,
     SharedZigmaModule,
-   
-    
 
-
+    // modulos Zigma
+    IndexZigmaModule,
+    AdminZigmaModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

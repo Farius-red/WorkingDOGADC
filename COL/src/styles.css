@@ -2,14 +2,21 @@
 
 :root {
     /* colores zigma */
-    --color-zigma: rgba(255, 255, 0, 0.9);
+    --color-zigma:  #ffe009;
+
     --color-textosZigma: #EF6C00;
+}
+.body{
+  background-color: #007bff0f !important ;
 }
 
 .Spam {
     color: var(--color-textosZigma);
-}
+  }
+  .primer{
+  background-color: var(--color-zigma);
 
+}
 #cabecera {
     height: 60px;
     -webkit-box-shadow: 14px 10px 23px 0px rgba(0, 0, 0, 0.75);
@@ -70,4 +77,5 @@ body {
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+
 }

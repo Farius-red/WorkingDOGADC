@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+
+// modelos
 import { Producto } from 'src/app/core/servicios/Zigmainflables/productos/modelos/productos/productosZigma.model';
+
+
+// servicios
+import { ProductosService } from 'src/app/core/servicios/Zigmainflables/productos/productos.service';
 import { ProductosZigmaSinFireBaseService } from 'src/app/core/servicios/Zigmainflables/productos/productosZigmaSinFirebase/productos-zigma-sin-fire-base.service';
 
 
@@ -11,10 +17,13 @@ import { ProductosZigmaSinFireBaseService } from 'src/app/core/servicios/Zigmain
 })
 export class DetalleProductZigmaComponent implements OnInit {
   productsinB: Producto;
+  producto;
+
 
   constructor(
      private route: ActivatedRoute,
-     private productosSinBase: ProductosZigmaSinFireBaseService
+     private productosSinBase: ProductosZigmaSinFireBaseService,
+     private product: ProductosService,
   ) { }
 
   ngOnInit(): void {
@@ -22,9 +31,22 @@ export class DetalleProductZigmaComponent implements OnInit {
     this.route.params.subscribe((params: Params) => {
         const id = params.id;
         this.productsinB = this.productosSinBase.getProductID(id);
-        console.log(this.productsinB);
+
+
+        this.producto = this.product.listaProductos();
+
+        this.fetchProduct(id);
+
+
 
     });
   }
 
+      // tslint:disable-next-line:typedef
+      fetchProduct(id: string){
+          this.productsinB = this.productosSinBase.getProductID(id) ;
+
+          console.log(this.productsinB);
+
+      }
 }

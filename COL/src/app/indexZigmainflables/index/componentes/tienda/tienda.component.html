@@ -4,7 +4,7 @@
 
         <div class="col-lg-3">
 
-            <h1 class="my-4 Spam">Productos</h1>
+            <h1 class="my-4 Spam text-center">Productos</h1>
             <div class="list-group">
                 <a href="#" class="list-group-item">Category 1</a>
                 <a href="#" class="list-group-item">Category 2</a>
@@ -43,18 +43,20 @@
                 </a>
             </div>
 
-            <div class="row">
 
 
-                <app-productos-ecu (productoCliked)="productoAdd($event)"></app-productos-ecu>
 
-            </div>
+
             <!-- /.row -->
 
+          </div>
+          <!-- /.col-lg-9 -->
+
         </div>
-        <!-- /.col-lg-9 -->
+        <!-- /.row -->
 
-    </div>
-    <!-- /.row -->
+      </div>
+<div class="container  m-4">
 
+  <app-productos-ecu  (productoCliked)="productoAdd($event)"></app-productos-ecu>
 </div>

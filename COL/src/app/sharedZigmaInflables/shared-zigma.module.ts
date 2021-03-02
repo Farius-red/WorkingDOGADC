@@ -3,25 +3,27 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavZigmaComponent } from './compIndexZIGMA/nav-zigma/nav-zigma.component';
 import { FooterComponent } from './compIndexZIGMA/footer/footer.component';
-
-
-
+import { MaterialModule } from '../material/material.module';
+import { PlantillaModulosZigmaComponent } from './plantilla-modulos-zigma/plantilla-modulos-zigma.component';
+import { HeaderModulosZigmaComponent } from './componentesModulos/componentes/header-modulos-zigma/header-modulos-zigma.component';
+import { NavModulosZigmaComponent } from './componentesModulos/componentes/nav-modulos-zigma/nav-modulos-zigma.component';
 
 @NgModule({
   declarations: [
     NavZigmaComponent,
     FooterComponent,
+    PlantillaModulosZigmaComponent,
+    HeaderModulosZigmaComponent,
+    NavModulosZigmaComponent,
   ],
-  imports: [
-    CommonModule,
-    
-    RouterModule,
-    
-  ],
-  exports:[
+  imports: [CommonModule, RouterModule, MaterialModule],
+  exports: [
     NavZigmaComponent,
     FooterComponent,
     CommonModule,
-  ]
+    PlantillaModulosZigmaComponent,
+    HeaderModulosZigmaComponent,
+    NavModulosZigmaComponent,
+  ],
 })
-export class SharedZigmaModule { }
+export class SharedZigmaModule {}

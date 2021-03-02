@@ -1,18 +1,71 @@
-<div class="col-lg-4 col-md-6 mb-4" *ngFor="let item of productos">
-    <div class="card h-100">
-        <a href="#"><img class="card-img-top" [src]="item.imagen" [alt]="item.nombreProducto"></a>
-        <div class="card-body">
-            <h4 class="card-title">
-                {{item.NombreProducto}}
+ <!-- Productos es variable con coneccion-->
+<div class="row container shadow-lg primer rounded-star">
+
+    <div class="card m-4 " *ngFor="let item of
+    productosSinfireb" style="width: 18rem;">
+    <div class="card-header">
+
+      <h3 class="card-title text-center">
+        {{item.NombreProducto}}
+      </h3>
+    </div>
+
+    <img class="card-img-top" [src]="item.imagen" [alt]="item.nombreProducto"
+    style="width: 18rem; height: 300px;">
+    <div class="card-body">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <h2 class="card-title">{{item.precio | currency}}</h2>
+        </li>
+        <li class="list-group-item">
+
+          <p class="card-text">{{item.Descripcion}}</p>
+
+        </li>
+        <li class="list-group-item">
+
+          <p class="card-text">{{item.medidas}}</p>
+        </li>
+      </ul>
+    </div>
+    <div class="card-footer">
+      <div class="container d-flex justify-content-around">
+        <button type="button" (click)="addCard(item.id)" class="btn btn-primary
+        btn-sm">Agregar</button>
+
+        <a type="button" [routerLink]="['/Zigmainflables/tienda',item.id]"
+        routerLinkActive="router-link-active" class="btn btn-succes btn-sm">ver
+        Detalle</a>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+
+
+
+<!--  <div class="col-lg-4 col-md-6 mb-4" *ngFor="let item of productos">
+         <div class="card h-100">
+             <a href="#"><img class="card-img-top" [src]="item.imagen" [alt]="item.nombreProducto"></a>
+             <div class="card-body">
+                 <h4 class="card-title">
+              {{item.NombreProducto}}
             </h4>
             <h5>{{item.precio}}- {{item.id}}</h5>
             <p class="card-text">{{item.Descripcion}}</p>
             <p class="card-text">{{item.medidas}}</p>
         </div>
         <div class="card-footer">
-           <button  type="button" (click)="addCard()" class="btn btn-primary">Agregar carrito</button>
+            <button  type="button" (click)="addCard()" class="btn btn-primary">Agregar carrito</button>
+
+            <a type="button" [routerLink]="['/routePath']" routerLinkActive="router-link-active"  class="btn btn-primary">ver Detalle</a>
         </div>
     </div>
 </div>
- <br>
-
+<br>
+-->

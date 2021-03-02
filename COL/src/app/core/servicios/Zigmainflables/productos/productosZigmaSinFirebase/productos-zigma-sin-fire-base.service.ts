@@ -6,9 +6,9 @@ import { Categoria, Producto } from '../modelos/productos/productosZigma.model';
 })
 export class ProductosZigmaSinFireBaseService {
   categorias: Categoria[] = [
-    { id: 1, nombreCategoria: 'Recreativos' },
-    { id: 2, nombreCategoria: 'Publicitarios' },
-    { id: 3, nombreCategoria: 'Skydancers' },
+    { id: '1', nombreCategoria: 'Recreativos' },
+    { id: '2', nombreCategoria: 'Publicitarios' },
+    { id: '3', nombreCategoria: 'Skydancers' },
   ];
 
   productosSinBase: Producto[] = [
@@ -21,7 +21,7 @@ export class ProductosZigmaSinFireBaseService {
       medidas: '9.50 mts fondo x  4.5 mts ancho x 7 mts de alto',
       precio: 6300000,
       imagen:
-        'COL/src/app/sharedZigmaInflables/img/productosInflables/barcoInflable.jpg',
+        'assets/images/imgZigma/productosInflables/barcoInflable.jpg',
     },
 
     {
@@ -33,7 +33,7 @@ export class ProductosZigmaSinFireBaseService {
       medidas: 'a convenir con el cliente',
       precio: 1800000,
       imagen:
-        'COL/src/app/sharedZigmaInflables/img/productosInflables/arañaInflable.jpg',
+        'assets/images/imgZigma/productosInflables/arañaInflable.jpg',
     },
     {
       id: '12',
@@ -44,7 +44,7 @@ export class ProductosZigmaSinFireBaseService {
       medidas: ' 4mts fondo x 4mts Ancho ',
       precio: 3500000,
       imagen:
-        'COL/src/app/sharedZigmaInflables/img/productosInflables/castilloInflable4x4Tobogan.jpg',
+        'assets/images/imgZigma/productosInflables/castilloInflable4x4Tobogan.jpg',
     },
 
     {
@@ -56,7 +56,7 @@ export class ProductosZigmaSinFireBaseService {
       medidas: '6 mts alto x 7 mts fondo x 5 mts ancho',
       precio: 5500000,
       imagen:
-        'COL/src/app/sharedZigmaInflables/img/productosInflables/barcoPirataInflableAmarillo.jpg',
+        'assets/images/imgZigma/productosInflables/barcoPirataInflableAmarillo.jpg',
     },
     {
       id: '14',
@@ -67,7 +67,7 @@ export class ProductosZigmaSinFireBaseService {
       medidas: '4 ancho x 4 fondo x 2.5 alto',
       precio: 33000000,
       imagen:
-        'COL/src/app/sharedZigmaInflables/img/productosInflables/castilloInflablePalmeras.jpg',
+        'assets/images/imgZigma/productosInflables/castilloInflablePalmeras.jpg',
     },
 
     {
@@ -78,7 +78,7 @@ export class ProductosZigmaSinFireBaseService {
       medidas: '5,3mts ancho   X 4,5fondo   X 4,0m alto ',
       precio: 4700000,
       imagen:
-        'COL/src/app/sharedZigmaInflables/img/productosInflables/castilloTobogan.jpg',
+        'assets/images/imgZigma/productosInflables/castilloTobogan.jpg',
     },
     {
       id: '16',
@@ -89,7 +89,7 @@ export class ProductosZigmaSinFireBaseService {
       medidas: '4mts x 4mts x 2.5 mts alto ',
       precio: 3300000,
       imagen:
-        'COL/src/app/sharedZigmaInflables/img/productosInflables/castilloCocodrillo.jpg',
+        'assets/images/imgZigma/productosInflables/castilloCocodrillo.jpg',
     },
 
     {
@@ -101,7 +101,7 @@ export class ProductosZigmaSinFireBaseService {
       medidas: '2 mts x 2mts ',
       precio: 1800000,
       imagen:
-        'COL/src/app/sharedZigmaInflables/img/productosInflables/miniCastillo.jpg',
+        'assets/images/imgZigma/productosInflables/miniCastillo.jpg',
     },
     {
       id: '18',
@@ -112,7 +112,7 @@ export class ProductosZigmaSinFireBaseService {
       medidas: 'medidas 7mts alto x 4.5mts ancho x  6 fondo',
       precio: 5300000,
       imagen:
-        'COL/src/app/sharedZigmaInflables/img/productosInflables/osoInflable.jpg',
+        'assets/images/imgZigma/productosInflables/osoInflable.jpg',
     },
 
     {
@@ -124,7 +124,7 @@ export class ProductosZigmaSinFireBaseService {
       medidas: '6mts fondo x 4.5 mts ancho x 3.5 mts alto',
       precio: 4800000,
       imagen:
-        'COL/src/app/sharedZigmaInflables/img/productosInflables/toboganCastillo6x4.5.jpg',
+        'assets/images/imgZigma/productosInflables/toboganCastillo6x4.5.jpg',
     },
     {
       id: '20',
@@ -135,7 +135,7 @@ export class ProductosZigmaSinFireBaseService {
       medidas: '2 mts alto x diametro de forma',
       precio: 1500000,
       imagen:
-        'COL/src/app/sharedZigmaInflables/img/productosInflables/inflablesPublicitarios.jpg',
+        'assets/images/imgZigma/productosInflables/inflablesPublicitarios.jpg',
     },
 
     {
@@ -147,7 +147,7 @@ export class ProductosZigmaSinFireBaseService {
       medidas: '4.5mts ancho x 4.5 alto x 5mts fondo ',
       precio: 45000000,
       imagen:
-        'COL/src/app/sharedZigmaInflables/img/productosInflables/ToboganInflable4.5ninosyninas.jpg',
+        'assets/images/imgZigma/productosInflables/ToboganInflable4.5ninosyninas.jpg',
     },
     {
       id: '22',
@@ -158,7 +158,7 @@ export class ProductosZigmaSinFireBaseService {
       medidas: '4.5mts ancho x 4mts alto x 6mts fondo',
       precio: 4800000,
       imagen:
-        'COL/src/app/sharedZigmaInflables/img/productosInflables/toboganCocodrillo.jpg',
+        'assets/images/imgZigma/productosInflables/toboganCocodrillo.jpg',
     },
 
     {
@@ -170,7 +170,7 @@ export class ProductosZigmaSinFireBaseService {
       medidas: '2mts alto x proporcion al diseño',
       precio: 1500000,
       imagen:
-        'COL/src/app/sharedZigmaInflables/img/productosInflables/inflablesPublicitarios.jpg',
+        'assets/images/imgZigma/productosInflables/inflablesPublicitarios.jpg',
     },
   ];
 

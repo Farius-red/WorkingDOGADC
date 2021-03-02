@@ -14,7 +14,7 @@ import { DetalleProductZigmaComponent } from './index/componentes/tienda/Product
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'Zigmainflables',
     component: LayoutIndexZigmaComponent,
     children: [
       {
