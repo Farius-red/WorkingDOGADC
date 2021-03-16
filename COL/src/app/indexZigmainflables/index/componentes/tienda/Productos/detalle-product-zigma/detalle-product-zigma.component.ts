@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 
 // modelos
-import { Producto } from 'src/app/core/servicios/Zigmainflables/productos/modelos/productos/productosZigma.model';
+import { Producto } from 'src/app/core/modelos/productos/productosZigma.model';
 
 
 // servicios

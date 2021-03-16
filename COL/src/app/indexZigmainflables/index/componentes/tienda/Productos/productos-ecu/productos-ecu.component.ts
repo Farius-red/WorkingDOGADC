@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Producto } from 'src/app/core/servicios/Zigmainflables/productos/modelos/productos/productosZigma.model';
+import { Producto } from 'src/app/core/modelos/productos/productosZigma.model';
 import {Params } from '@angular/router';
 // servicios
 import { ProductosService } from '../../../../../../core/servicios/Zigmainflables/productos/productos.service';

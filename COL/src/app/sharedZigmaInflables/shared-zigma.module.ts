@@ -7,6 +7,12 @@ import { MaterialModule } from '../material/material.module';
 import { PlantillaModulosZigmaComponent } from './plantilla-modulos-zigma/plantilla-modulos-zigma.component';
 import { HeaderModulosZigmaComponent } from './componentesModulos/componentes/header-modulos-zigma/header-modulos-zigma.component';
 import { NavModulosZigmaComponent } from './componentesModulos/componentes/nav-modulos-zigma/nav-modulos-zigma.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -16,7 +22,9 @@ import { NavModulosZigmaComponent } from './componentesModulos/componentes/nav-m
     HeaderModulosZigmaComponent,
     NavModulosZigmaComponent,
   ],
-  imports: [CommonModule, RouterModule, MaterialModule],
+  imports: [
+    CommonModule, RouterModule, MaterialModule, ReactiveFormsModule ,
+  ],
   exports: [
     NavZigmaComponent,
     FooterComponent,
@@ -24,6 +32,10 @@ import { NavModulosZigmaComponent } from './componentesModulos/componentes/nav-m
     PlantillaModulosZigmaComponent,
     HeaderModulosZigmaComponent,
     NavModulosZigmaComponent,
+    ReactiveFormsModule,
+
   ],
+
+  providers: [  ],
 })
 export class SharedZigmaModule {}

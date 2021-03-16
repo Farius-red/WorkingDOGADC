@@ -1,13 +1,10 @@
 import { Injectable } from '@angular/core';
 
-import {
-  AngularFirestore,
-  AngularFirestoreCollection,
-} from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Timestamp } from 'rxjs/internal/operators/timestamp';
 import { map } from 'rxjs/operators';
-import { Producto } from './modelos/productos/productosZigma.model';
+import { Producto } from '../../../modelos/productos/productosZigma.model';
 
 @Injectable({
   providedIn: 'root',
@@ -45,4 +42,6 @@ export class ProductosService {
  getProductosID(){
    this.productosCollection.get();
  }
+
+
 }

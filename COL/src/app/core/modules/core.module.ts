@@ -1,32 +1,33 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-//servicios working dog ADC
+// servicios working dog ADC
 import { ProductosWorkingDOGService } from '../servicios/workingdogADC/productos/productos-working-dog.service';
 import { UsuariosServiceWorkingdog } from '../servicios/workingdogADC/usuarios/usuarios.Workingdo.service';
 
-//servicios zigmainfalbles 
+// servicios zigmainfalbles
 
 import { ProductosService } from '../servicios/Zigmainflables/productos/productos.service';
-import {  UsuariosServiceZigma } from '../servicios/Zigmainflables/usuarios/usuarios.zigma.service';
-
+import { UsuariosServiceZigma } from '../servicios/Zigmainflables/usuarios/usuarios.zigma.service';
+import { SharedZigmaModule } from 'src/app/sharedZigmaInflables/shared-zigma.module';
 
 @NgModule({
-  declarations: [
-
- 
-  ],
+  declarations: [],
   imports: [
-    CommonModule
+
+    CommonModule,
+    SharedZigmaModule,
+
+
   ],
-  providers:[
-    //workingdog
+  providers: [
+    // workingdog
     ProductosWorkingDOGService,
     UsuariosServiceWorkingdog,
 
-    //zigmainflables
+    // zigmainflables
     ProductosService,
-    UsuariosServiceZigma,
+    UsuariosServiceZigma
   ]
 })
-export class CoreModule { }
+export class CoreModule {}

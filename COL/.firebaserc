@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "zigmainflables-fabrica": {
+      "hosting": {
+        "WorkingdogADC": [
+          "zigmainflables-fabrica"
+        ]
+      }
+    }
+  }
+}

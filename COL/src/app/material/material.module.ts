@@ -21,6 +21,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 
 
@@ -45,6 +48,10 @@ import { MatBadgeModule } from '@angular/material/badge';
     MatToolbarModule,
     MatSidenavModule,
     MatBadgeModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+
   ],
   exports: [
     // form
@@ -63,6 +70,10 @@ import { MatBadgeModule } from '@angular/material/badge';
     MatToolbarModule,
     MatSidenavModule,
     MatBadgeModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+
 
   ],
 })

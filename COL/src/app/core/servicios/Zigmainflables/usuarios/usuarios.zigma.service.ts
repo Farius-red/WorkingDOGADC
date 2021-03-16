@@ -1,39 +1,37 @@
 import { Injectable } from '@angular/core';
 
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import {
+  AngularFirestore,
+  AngularFirestoreCollection,
+} from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
 import { map } from 'rxjs/operators';
-
-export interface Usuario {
-  FechaDeCreacion: any;
-  apellido:string;
-  clave:string;
-  nombres:string;
-  rol:string;
-  telefono:number;
-}
-
+import { UsuariosZigma } from 'src/app/core/modelos/usuariosZig/usuariosZigma.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UsuariosServiceZigma {
-  private usuariosCollection: AngularFirestoreCollection<Usuario>;
-  usuarios: Observable<Usuario[]>;
-  constructor(private afs: AngularFirestore) { 
+  private usuariosCollection: AngularFirestoreCollection<UsuariosZigma>;
+  usuarios: Observable<UsuariosZigma[]>;
 
-    this.usuariosCollection = afs.collection<Usuario>('usuarios');
+
+  constructor(private afs: AngularFirestore) {
+    this.usuariosCollection = afs.collection<UsuariosZigma>('usuarios');
     this.usuarios = this.usuariosCollection.snapshotChanges().pipe(
-      map(actions => actions.map(a => {
-        const data = a.payload.doc.data() as Usuario;
-        const id = a.payload.doc.id;
-        return { id, ...data };
-      }))
+      map((actions) =>
+        actions.map((a) => {
+          const data = a.payload.doc.data() as UsuariosZigma;
+          const id = a.payload.doc.id;
+          return { id, ...data };
+        })
+      )
     );
   }
 
-  listarUsuario(){
+  // tslint:disable-next-line:typedef
+  listarUsuario() {
     return this.usuarios;
   }
 }

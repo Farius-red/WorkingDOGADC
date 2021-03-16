@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Categoria, Producto } from '../modelos/productos/productosZigma.model';
+import { Categoria, Producto } from '../../../../modelos/productos/productosZigma.model';
 
 @Injectable({
   providedIn: 'root',

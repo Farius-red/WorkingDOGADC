@@ -17,7 +17,7 @@ import { UsuariosServiceZigma } from '../core/servicios/Zigmainflables/usuarios/
 import { ProductosService } from '../core/servicios/Zigmainflables/productos/productos.service';
 
 // componentes
-import { LoginZigmaComponent } from './index/componentes/login-zigma/login-zigma.component';
+
 import { RegistroUsuZigmaComponent } from './index/componentes/registro-usu-zigma/registro-usu-zigma.component';
 import { NosotrosZigmaComponent } from './index/componentes/nosotros-zigma/nosotros-zigma.component';
 import { LayoutIndexZigmaComponent } from './index/componentes/layout-index-zigma/layout-index-zigma.component';
@@ -25,10 +25,12 @@ import { SharedZigmaModule } from '../sharedZigmaInflables/shared-zigma.module';
 import { TiendaComponent } from './index/componentes/tienda/tienda.component';
 import { ProductosEcuComponent } from './index/componentes/tienda/Productos/productos-ecu/productos-ecu.component';
 import { DetalleProductZigmaComponent } from './index/componentes/tienda/Productos/detalle-product-zigma/detalle-product-zigma.component';
+import { LoginModule } from '../auth/login/login.module';
+import { RegistroModule } from '../auth/registro/registro.module';
 
 @NgModule({
   declarations: [
-    LoginZigmaComponent,
+
     RegistroUsuZigmaComponent,
     NosotrosZigmaComponent,
     LayoutIndexZigmaComponent,
@@ -47,13 +49,16 @@ import { DetalleProductZigmaComponent } from './index/componentes/tienda/Product
     AngularFireDatabaseModule,
     AngularFireStorageModule,
 
+
     // modulos
     SharedZigmaModule,
+    LoginModule,
+    RegistroModule,
   ],
   providers: [UsuariosServiceZigma, ProductosService],
 
   exports: [
-    LoginZigmaComponent,
+
     RegistroUsuZigmaComponent,
     NosotrosZigmaComponent,
     LayoutIndexZigmaComponent,

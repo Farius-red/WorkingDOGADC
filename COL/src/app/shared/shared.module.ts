@@ -10,9 +10,7 @@ import { NavModulosWorkingComponent } from './modulos/componentes/nav-modulos-wo
 
 
 @NgModule({
-  declarations: [
-    
-    NavModulosWorkingComponent],
+  declarations: [   NavModulosWorkingComponent],
     imports: [
       CommonModule,
       LayoutModule,
