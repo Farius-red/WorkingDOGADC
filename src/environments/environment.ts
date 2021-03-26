@@ -1,5 +1,5 @@
 export const environment = {
-  production: false,
+  production: true,
   firebase: {
     apiKey: 'AIzaSyC_kg6-zA60Fup9wpj3z6V8ZvGuwPal7xU',
     authDomain: 'zigmainflables-fabrica.firebaseapp.com',
