@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 
-import { NgModule } from '@angular/core';
+import {NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -33,6 +33,7 @@ import { SharedModule } from './shared/shared.module';
 import { SharedZigmaModule } from './sharedZigmaInflables/shared-zigma.module';
 import { CoreModule } from './core/modules/core.module';
 import { IndexZigmaModule } from './indexZigmainflables/index-zigma.module';
+
 import { AdminZigmaModule } from './admin-zigma/admin-zigma.module';
 import { LoginModule } from './auth/login/login.module';
 import { RegistroModule } from './auth/registro/registro.module';
@@ -42,6 +43,7 @@ import { RegistroModule } from './auth/registro/registro.module';
 @NgModule({
   declarations: [
     AppComponent,
+
 
 
     // index
@@ -57,8 +59,6 @@ import { RegistroModule } from './auth/registro/registro.module';
     AppRoutingModule,
     BrowserAnimationsModule,
 
-
-
     // fire base
 
 
@@ -72,11 +72,11 @@ import { RegistroModule } from './auth/registro/registro.module';
     SharedModule,
     SharedZigmaModule,
 
-
     // modulos Zigma
     IndexZigmaModule,
     AdminZigmaModule,
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [CoreModule],
   bootstrap: [AppComponent],
 })

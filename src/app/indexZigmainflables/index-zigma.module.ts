@@ -1,5 +1,5 @@
 import { RouterModule } from '@angular/router';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { IndexZigmaRoutingModule } from './index-zigma-routing.module';
@@ -27,16 +27,26 @@ import { ProductosEcuComponent } from './index/componentes/tienda/Productos/prod
 import { DetalleProductZigmaComponent } from './index/componentes/tienda/Productos/detalle-product-zigma/detalle-product-zigma.component';
 import { LoginModule } from '../auth/login/login.module';
 import { RegistroModule } from '../auth/registro/registro.module';
+import { TarjetaComponent } from './index/componentes/tarjeta/tarjeta.component';
+import { InicioZigmaComponent } from './index/componentes/inicio/inicio.zigma.component';
+
 
 @NgModule({
   declarations: [
 
+    InicioZigmaComponent,
     RegistroUsuZigmaComponent,
     NosotrosZigmaComponent,
     LayoutIndexZigmaComponent,
     TiendaComponent,
     ProductosEcuComponent,
     DetalleProductZigmaComponent,
+    TarjetaComponent,
+
+
+
+
+
   ],
   imports: [
     CommonModule,
@@ -62,6 +72,11 @@ import { RegistroModule } from '../auth/registro/registro.module';
     RegistroUsuZigmaComponent,
     NosotrosZigmaComponent,
     LayoutIndexZigmaComponent,
+    TarjetaComponent,
+
+
+
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class IndexZigmaModule {}
