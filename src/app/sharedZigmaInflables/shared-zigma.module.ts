@@ -21,6 +21,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     PlantillaModulosZigmaComponent,
     HeaderModulosZigmaComponent,
     NavModulosZigmaComponent,
+
   ],
   imports: [
     CommonModule, RouterModule, MaterialModule, ReactiveFormsModule ,
@@ -33,6 +34,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeaderModulosZigmaComponent,
     NavModulosZigmaComponent,
     ReactiveFormsModule,
+
 
   ],
 

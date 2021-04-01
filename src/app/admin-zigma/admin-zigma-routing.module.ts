@@ -9,11 +9,7 @@ const routes: Routes = [
     path: 'adminZigma',
     component: LayatoutComponent,
     children: [
-      {
-        path: '',
-        redirectTo: 'adminZigma',
-        pathMatch: 'full',
-      },
+
 
       { path: 'crearProducto', component: ProductosFormZComponent },
       { path: 'ListaProductos', component: ListProductZigmaComponent },

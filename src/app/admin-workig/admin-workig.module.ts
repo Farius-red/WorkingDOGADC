@@ -6,9 +6,10 @@ import { AdminWorkigRoutingModule } from './admin-workig-routing.module';
 import { MaterialModule } from '../material/material.module';
 import { SharedModule } from '../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MenuAdmWorkingComponent } from './componentes/menu-adm-working/menu-adm-working.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [MenuAdmWorkingComponent],
   imports: [
     CommonModule,
     AdminWorkigRoutingModule,
@@ -17,5 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MaterialModule,
   ],
   providers: [],
+
+  exports: [MenuAdmWorkingComponent]
 })
 export class AdminWorkigModule {}
