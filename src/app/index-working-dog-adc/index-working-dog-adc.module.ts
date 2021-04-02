@@ -8,16 +8,22 @@ import { PlantillaIndexWorkingDogAdcComponent } from './plantilla-index-working-
 import { LoginModule } from '../auth/login/login.module';
 import { RegistroModule } from '../auth/registro/registro.module';
 
+// componentes
+
+import { BodyComponent } from './componentes/body/body.component';
+import { SectionComponent } from './componentes/section/section.component';
+
 
 @NgModule({
-  declarations: [PlantillaIndexWorkingDogAdcComponent],
+  declarations: [PlantillaIndexWorkingDogAdcComponent, BodyComponent,  SectionComponent ],
   imports: [
     CommonModule,
-    IndexWorkingDogAdcRoutingModule,
-    SharedModule,
     MaterialModule,
+    IndexWorkingDogAdcRoutingModule,
     LoginModule,
     RegistroModule,
-  ]
+    SharedModule,
+  ],
+  exports: [PlantillaIndexWorkingDogAdcComponent, BodyComponent, SectionComponent]
 })
 export class IndexWorkingDogAdcModule { }

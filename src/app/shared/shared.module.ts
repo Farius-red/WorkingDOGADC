@@ -7,26 +7,30 @@ import { MaterialModule } from '../material/material.module';
 
 // componentes index
 
-import { BodyComponent } from './index/componentes/body/body.component';
 import { FooterWorkingDComponent } from './index/componentes/footer/footer.workingD.component';
-import { HeaderComponent } from './index/componentes/header/header.component';
-import { SectionComponent } from './index/componentes/section/section.component';
+
+import { NavWorkingDogADCComponent } from './index/componentes/nav-working-dog-adc/nav-working-dog-adc.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 // componentes modulos
 @NgModule({
-  declarations: [
-    BodyComponent,
-    FooterWorkingDComponent,
-    HeaderComponent,
-    SectionComponent,
+  declarations: [FooterWorkingDComponent, NavWorkingDogADCComponent],
+  imports: [
+    CommonModule,
+    LayoutModule,
+    MaterialModule,
+    RouterModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
   ],
-  imports: [CommonModule, LayoutModule, MaterialModule, RouterModule],
 
-  exports: [
-    BodyComponent,
-    FooterWorkingDComponent,
-    HeaderComponent,
-    SectionComponent,
-  ],
+  exports: [FooterWorkingDComponent, NavWorkingDogADCComponent],
 })
 export class SharedModule {}

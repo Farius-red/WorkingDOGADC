@@ -24,8 +24,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-
-
+import {MatTreeModule} from '@angular/material/tree';
 
 @NgModule({
   declarations: [],
@@ -51,6 +50,8 @@ import { MatSortModule } from '@angular/material/sort';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatTreeModule,
+
 
   ],
   exports: [
@@ -73,6 +74,8 @@ import { MatSortModule } from '@angular/material/sort';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatTreeModule,
+
 
 
   ],
