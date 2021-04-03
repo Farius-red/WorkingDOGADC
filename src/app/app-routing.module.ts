@@ -23,10 +23,17 @@ const routes: Routes = [
   },
 
   {
-    path: 'adminZigma',
+    path: 'adminWorkingDog',
     loadChildren: () =>
       import('./admin-workig/admin-workig.module').then(
         (m) => m.AdminWorkigModule
+      ),
+  },
+  {
+    path: 'adminZigma',
+    loadChildren: () =>
+      import('./admin-zigma/admin-zigma-routing.module').then(
+        (m) => m.AdminZigmaRoutingModule
       ),
   },
 ];

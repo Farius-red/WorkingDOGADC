@@ -12,10 +12,11 @@ import { RegistroModule } from '../auth/registro/registro.module';
 
 import { BodyComponent } from './componentes/body/body.component';
 import { SectionComponent } from './componentes/section/section.component';
+import { SectionServiciosComponent } from './componentes/section-servicios/section-servicios.component';
 
 
 @NgModule({
-  declarations: [PlantillaIndexWorkingDogAdcComponent, BodyComponent,  SectionComponent ],
+  declarations: [PlantillaIndexWorkingDogAdcComponent, BodyComponent,  SectionComponent, SectionServiciosComponent ],
   imports: [
     CommonModule,
     MaterialModule,

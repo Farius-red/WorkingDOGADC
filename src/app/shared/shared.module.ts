@@ -8,29 +8,29 @@ import { MaterialModule } from '../material/material.module';
 // componentes index
 
 import { FooterWorkingDComponent } from './index/componentes/footer/footer.workingD.component';
-
 import { NavWorkingDogADCComponent } from './index/componentes/nav-working-dog-adc/nav-working-dog-adc.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
 
 // componentes modulos
-@NgModule({
-  declarations: [FooterWorkingDComponent, NavWorkingDogADCComponent],
-  imports: [
-    CommonModule,
-    LayoutModule,
-    MaterialModule,
-    RouterModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-  ],
+import { DaskboardComponent } from './modulos/componentes/daskboard/daskboard.component';
+import { HeaderDaskWorkingDOGComponent } from './modulos/componentes/header-dask-working-dog/header-dask-working-dog.component';
+import { NavDaskWorkingDOGComponent } from './modulos/componentes/nav-dask-working-dog/nav-dask-working-dog.component';
 
-  exports: [FooterWorkingDComponent, NavWorkingDogADCComponent],
+@NgModule({
+  declarations: [
+    FooterWorkingDComponent,
+    NavWorkingDogADCComponent,
+    DaskboardComponent,
+    HeaderDaskWorkingDOGComponent,
+    NavDaskWorkingDOGComponent,
+  ],
+  imports: [CommonModule, LayoutModule, MaterialModule, RouterModule],
+
+  exports: [
+    FooterWorkingDComponent,
+    NavWorkingDogADCComponent,
+    DaskboardComponent,
+    HeaderDaskWorkingDOGComponent,
+    NavDaskWorkingDOGComponent,
+  ],
 })
 export class SharedModule {}
