@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { LayoutModule } from '@angular/cdk/layout';
-import { MaterialModule } from '../material/material.module';
+
+import { MaterialModule } from 'src/app/material/material.module';
 
 // componentes index
 
 import { FooterWorkingDComponent } from './index/componentes/footer/footer.workingD.component';
 import { NavWorkingDogADCComponent } from './index/componentes/nav-working-dog-adc/nav-working-dog-adc.component';
+
 
 // componentes modulos
 import { DaskboardComponent } from './modulos/componentes/daskboard/daskboard.component';

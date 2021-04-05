@@ -10,14 +10,14 @@ const routes: Routes = [
   {
     path: 'Zigmainflables',
     loadChildren: () =>
-      import('./indexZigmainflables/index-zigma.module').then(
+      import('./Zigmainflables/indexZigmainflables/index-zigma.module').then(
         (m) => m.IndexZigmaModule
       ),
   },
   {
     path: 'WorkingDogADC',
     loadChildren: () =>
-      import('./index-working-dog-adc/index-working-dog-adc.module').then(
+      import('./workingDog/index-working-dog-adc/index-working-dog-adc.module').then(
         (m) => m.IndexWorkingDogAdcModule
       ),
   },
@@ -25,14 +25,14 @@ const routes: Routes = [
   {
     path: 'adminWorkingDog',
     loadChildren: () =>
-      import('./admin-workig/admin-workig.module').then(
+      import('./workingDog/admin-workig/admin-workig.module').then(
         (m) => m.AdminWorkigModule
       ),
   },
   {
     path: 'adminZigma',
     loadChildren: () =>
-      import('./admin-zigma/admin-zigma-routing.module').then(
+      import('./Zigmainflables/admin-zigma/admin-zigma-routing.module').then(
         (m) => m.AdminZigmaRoutingModule
       ),
   },

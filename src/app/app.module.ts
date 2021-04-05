@@ -17,15 +17,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/modules/core.module';
 
 // modulos zigma
-import { SharedZigmaModule } from './sharedZigmaInflables/shared-zigma.module';
-import { IndexZigmaModule } from './indexZigmainflables/index-zigma.module';
-import { AdminZigmaModule } from './admin-zigma/admin-zigma.module';
+import { SharedZigmaModule } from './Zigmainflables/sharedZigmaInflables/shared-zigma.module';
+import { IndexZigmaModule } from './Zigmainflables/indexZigmainflables/index-zigma.module';
+import { AdminZigmaModule } from './Zigmainflables/admin-zigma/admin-zigma.module';
 
 // modulos WorkingDOGADC
-import { SharedModule } from './shared/shared.module';
-import { IndexWorkingDogAdcModule } from './index-working-dog-adc/index-working-dog-adc.module';
-import { AdminWorkigModule } from './admin-workig/admin-workig.module';
+
+import { IndexWorkingDogAdcModule } from './workingDog/index-working-dog-adc/index-working-dog-adc.module';
+
 import { LoginModule } from './auth/login/login.module';
+import { AdminWorkigModule } from './workingDog/admin-workig/admin-workig.module';
+import { SharedModule } from './workingDog/shared/shared.module';
 
 @NgModule({
   declarations: [AppComponent],

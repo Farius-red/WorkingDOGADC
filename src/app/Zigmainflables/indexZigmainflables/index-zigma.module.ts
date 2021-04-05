@@ -13,8 +13,8 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from 'src/environments/environment';
 
 // servicios
-import { UsuariosServiceZigma } from '../core/servicios/Zigmainflables/usuarios/usuarios.zigma.service';
-import { ProductosService } from '../core/servicios/Zigmainflables/productos/productos.service';
+import { UsuariosServiceZigma } from '../../core/servicios/Zigmainflables/usuarios/usuarios.zigma.service';
+import { ProductosService } from '../../core/servicios/Zigmainflables/productos/productos.service';
 
 // componentes
 
@@ -25,8 +25,8 @@ import { SharedZigmaModule } from '../sharedZigmaInflables/shared-zigma.module';
 import { TiendaComponent } from './index/componentes/tienda/tienda.component';
 import { ProductosEcuComponent } from './index/componentes/tienda/Productos/productos-ecu/productos-ecu.component';
 import { DetalleProductZigmaComponent } from './index/componentes/tienda/Productos/detalle-product-zigma/detalle-product-zigma.component';
-import { LoginModule } from '../auth/login/login.module';
-import { RegistroModule } from '../auth/registro/registro.module';
+import { LoginModule } from '../../auth/login/login.module';
+import { RegistroModule } from '../../auth/registro/registro.module';
 import { TarjetaComponent } from './index/componentes/tarjeta/tarjeta.component';
 import { InicioZigmaComponent } from './index/componentes/inicio/inicio.zigma.component';
 

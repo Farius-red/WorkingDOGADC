@@ -1,9 +1,9 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Producto } from 'src/app/core/modelos/productos/productosZigma.model';
-import {Params } from '@angular/router';
+
 // servicios
-import { ProductosService } from '../../../../../../core/servicios/Zigmainflables/productos/productos.service';
-import { ProductosZigmaSinFireBaseService } from '../../../../../../core/servicios/Zigmainflables/productos/productosZigmaSinFirebase/productos-zigma-sin-fire-base.service';
+import { ProductosService } from '../../../../../../../core/servicios/Zigmainflables/productos/productos.service';
+import { ProductosZigmaSinFireBaseService } from '../../../../../../../core/servicios/Zigmainflables/productos/productosZigmaSinFirebase/productos-zigma-sin-fire-base.service';
 
 
 @Component({

@@ -9,7 +9,7 @@ import { UsuariosServiceWorkingdog } from '../servicios/workingdogADC/usuarios/u
 
 import { ProductosService } from '../servicios/Zigmainflables/productos/productos.service';
 import { UsuariosServiceZigma } from '../servicios/Zigmainflables/usuarios/usuarios.zigma.service';
-import { SharedZigmaModule } from 'src/app/sharedZigmaInflables/shared-zigma.module';
+import { SharedZigmaModule } from 'src/app/Zigmainflables/sharedZigmaInflables/shared-zigma.module';
 
 @NgModule({
   declarations: [],

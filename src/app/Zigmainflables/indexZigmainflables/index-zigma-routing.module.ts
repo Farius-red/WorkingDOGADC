@@ -24,8 +24,8 @@ const routes: Routes = [
         pathMatch: 'prefix',
       },
 
-      { path: 'login', loadChildren: () => import('../auth/login/login.module').then(m => m.LoginModule) },
-      { path: 'registro', loadChildren: () => import('../auth/registro/registro.module').then(m => m.RegistroModule) },
+      { path: 'login', loadChildren: () => import('../../auth/login/login.module').then(m => m.LoginModule) },
+      { path: 'registro', loadChildren: () => import('../../auth/registro/registro.module').then(m => m.RegistroModule) },
       { path: 'inicio', component: InicioZigmaComponent },
       { path: 'nosotros', component: NosotrosZigmaComponent },
       { path: 'tienda', component: TiendaComponent },
