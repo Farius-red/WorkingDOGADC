@@ -15,6 +15,14 @@ import { ListaProductWorkingDogComponent } from './componentes/crudProductos/lis
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { NuevoServicioWorkingDogComponent } from './componentes/crudServicios/nuevo-servicio-working-dog/nuevo-servicio-working-dog.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCardModule } from '@angular/material/card';
+import { ListaServiciosWorkingDogComponent } from './componentes/crudServicios/lista-servicios-working-dog/lista-servicios-working-dog.component';
+import { ListaCortesWorkingDogComponent } from './componentes/crudServicios/lista-cortes-working-dog/lista-cortes-working-dog.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +32,9 @@ import { MatSortModule } from '@angular/material/sort';
     CrearUsuaWorkingDogComponent,
     CrearProductWorkingDogComponent,
     ListaProductWorkingDogComponent,
+    NuevoServicioWorkingDogComponent,
+    ListaServiciosWorkingDogComponent,
+    ListaCortesWorkingDogComponent,
   ],
   imports: [
     CommonModule,
@@ -34,6 +45,11 @@ import { MatSortModule } from '@angular/material/sort';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatCardModule,
   ],
   providers: [],
 

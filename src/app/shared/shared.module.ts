@@ -14,6 +14,7 @@ import { NavWorkingDogADCComponent } from './index/componentes/nav-working-dog-a
 import { DaskboardComponent } from './modulos/componentes/daskboard/daskboard.component';
 import { HeaderDaskWorkingDOGComponent } from './modulos/componentes/header-dask-working-dog/header-dask-working-dog.component';
 import { NavDaskWorkingDOGComponent } from './modulos/componentes/nav-dask-working-dog/nav-dask-working-dog.component';
+import { MenuAdminWorkingDogComponent } from './modulos/componentes/menu-admin-working-dog/menu-admin-working-dog.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NavDaskWorkingDOGComponent } from './modulos/componentes/nav-dask-worki
     DaskboardComponent,
     HeaderDaskWorkingDOGComponent,
     NavDaskWorkingDOGComponent,
+    MenuAdminWorkingDogComponent,
   ],
   imports: [CommonModule, LayoutModule, MaterialModule, RouterModule],
 
@@ -31,6 +33,7 @@ import { NavDaskWorkingDOGComponent } from './modulos/componentes/nav-dask-worki
     DaskboardComponent,
     HeaderDaskWorkingDOGComponent,
     NavDaskWorkingDOGComponent,
+    MenuAdminWorkingDogComponent,
   ],
 })
 export class SharedModule {}
