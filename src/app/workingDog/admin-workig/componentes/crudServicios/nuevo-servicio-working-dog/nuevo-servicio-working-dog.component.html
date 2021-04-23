@@ -1,0 +1,90 @@
+<form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>Registrar Nuevo Servicio</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Escriba el numero de identidad" formControlName="dI">
+          </mat-form-field>
+          <mat-error *ngIf="addressForm.controls['dI'].hasError('required')">
+            Escriba numero Documenti  <strong>Este campo es obligatorio</strong>
+            </mat-error>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Nombre" formControlName="nombre">
+            <mat-error *ngIf="addressForm.controls['nombre'].hasError('required')">
+            Escriba su  nombre  <strong>Este campo es obligatorio</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Apellido" formControlName="apellido">
+
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <textarea matInput placeholder="Escriba  la Direccion" formControlName="direccion"></textarea>
+            <mat-error *ngIf="addressForm.controls['direccion'].hasError('required')">
+             Escriba su  direccion <strong>Este campo es requerido</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row" *ngIf="!hasUnitNumber">
+        <div class="col">
+          <button  mat-raised-button color="primary" (click)="hasUnitNumber = !hasUnitNumber">
+            Click para agregar observaciones o  mas detalle de la  direccion
+          </button>
+        </div>
+      </div>
+      <div class="row" *ngIf="hasUnitNumber">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <textarea matInput placeholder="Agrege Aqui datos complementarios o observaciones " formControlName="observaciones"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Escoja un ciudad" formControlName="ciudades">
+              <mat-option *ngFor="let ciudad of ciudades" [value]="ciudad.nombre">
+                {{ ciudad.nombre }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="addressForm.controls['ciudades'].hasError('required')">
+              Escoja un ciudad <strong>Este Campo es obligatorio</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Escoja un servicio" formControlName="servicio">
+              <mat-option *ngFor="let servicio of servicios" [value]="servicio.nombre">
+                {{ servicio.nombre }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="addressForm.controls['servicio'].hasError('required')">
+              Escoja un servicio <strong>Este Campo es obligatorio</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">Registrar</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

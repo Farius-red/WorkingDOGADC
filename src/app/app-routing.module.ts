@@ -1,29 +1,40 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
-// compontes
-import { InicioComponent } from './index/componentes/inicio/inicio.component';
-
 const routes: Routes = [
+  {
+    path: '',
+    loadChildren: () =>
+      import('./auth/login/login.module').then((m) => m.LoginModule),
+  },
   {
     path: 'Zigmainflables',
     loadChildren: () =>
-      import('./indexZigmainflables/index-zigma.module').then(
+      import('./Zigmainflables/indexZigmainflables/index-zigma.module').then(
         (m) => m.IndexZigmaModule
       ),
   },
-
   {
-    path: 'adminZigma',
+    path: 'WorkingDogADC',
     loadChildren: () =>
-      import('./admin-workig/admin-workig.module').then(
-        (m) => m.AdminWorkigModule
+      import('./workingDog/index-working-dog-adc/index-working-dog-adc.module').then(
+        (m) => m.IndexWorkingDogAdcModule
       ),
   },
 
   {
-    path: 'WorkingDogADC',
-    component: InicioComponent,
+    path: 'adminWorkingDog',
+    loadChildren: () =>
+      import('./workingDog/admin-workig/admin-workig.module').then(
+        (m) => m.AdminWorkigModule
+      ),
+  },
+  {
+    path: 'adminZigma',
+    loadChildren: () =>
+      import('./Zigmainflables/admin-zigma/admin-zigma-routing.module').then(
+        (m) => m.AdminZigmaRoutingModule
+      ),
   },
 ];
 

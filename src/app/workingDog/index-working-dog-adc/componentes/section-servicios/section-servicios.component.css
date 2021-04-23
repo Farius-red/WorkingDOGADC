@@ -1,0 +1,31 @@
+.services .icon-box h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 5px 0 10px 60px;
+}
+
+.services .icon-box mat-icon {
+  font-size: 48px;
+  float: left;
+  color: #f3f3f3;
+}
+
+.services .icon-box p {
+  font-size: 15px;
+  color: #000000;
+  margin-left: 60px;
+}
+
+.services .image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
+}
+
+section{
+  background-color: lightblue;
+  width: 100%;
+  border-radius: 50px 50px 50px 50px;
+  box-shadow:10px 10px 10px;
+}
