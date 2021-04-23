@@ -5,13 +5,13 @@ import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
 
 // TODO: Replace this with your own data model type
-export interface ListaProductWorkingDogItem {
+export interface ListaAdiestramientoItem {
   name: string;
   id: number;
 }
 
 // TODO: replace this with real data from your application
-const EXAMPLE_DATA: ListaProductWorkingDogItem[] = [
+const EXAMPLE_DATA: ListaAdiestramientoItem[] = [
   {id: 1, name: 'Hydrogen'},
   {id: 2, name: 'Helium'},
   {id: 3, name: 'Lithium'},
@@ -35,12 +35,12 @@ const EXAMPLE_DATA: ListaProductWorkingDogItem[] = [
 ];
 
 /**
- * Data source for the ListaProductWorkingDog view. This class should
+ * Data source for the ListaAdiestramiento view. This class should
  * encapsulate all logic for fetching and manipulating the displayed data
  * (including sorting, pagination, and filtering).
  */
-export class ListaProductWorkingDogDataSource extends DataSource<ListaProductWorkingDogItem> {
-  data: ListaProductWorkingDogItem[] = EXAMPLE_DATA;
+export class ListaAdiestramientoDataSource extends DataSource<ListaAdiestramientoItem> {
+  data: ListaAdiestramientoItem[] = EXAMPLE_DATA;
   paginator: MatPaginator;
   sort: MatSort;
 
@@ -53,7 +53,7 @@ export class ListaProductWorkingDogDataSource extends DataSource<ListaProductWor
    * the returned stream emits new items.
    * @returns A stream of the items to be rendered.
    */
-  connect(): Observable<ListaProductWorkingDogItem[]> {
+  connect(): Observable<ListaAdiestramientoItem[]> {
     // Combine everything that affects the rendered data into one update
     // stream for the data-table to consume.
     const dataMutations = [
@@ -77,7 +77,7 @@ export class ListaProductWorkingDogDataSource extends DataSource<ListaProductWor
    * Paginate the data (client-side). If you're using server-side pagination,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getPagedData(data: ListaProductWorkingDogItem[]) {
+  private getPagedData(data: ListaAdiestramientoItem[]) {
     const startIndex = this.paginator.pageIndex * this.paginator.pageSize;
     return data.splice(startIndex, this.paginator.pageSize);
   }
@@ -86,7 +86,7 @@ export class ListaProductWorkingDogDataSource extends DataSource<ListaProductWor
    * Sort the data (client-side). If you're using server-side sorting,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getSortedData(data: ListaProductWorkingDogItem[]) {
+  private getSortedData(data: ListaAdiestramientoItem[]) {
     if (!this.sort.active || this.sort.direction === '') {
       return data;
     }

@@ -1,35 +1,61 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
+import { ActivatedRoute, Params, Router } from '@angular/router';
+import { UsuariosWorkingdog } from 'src/app/core/modelos/usuariosZig/usuariosWorkingDog.model';
+import { UsuariosServiceWorkingdog } from 'src/app/core/servicios/workingdogADC/usuarios/usuarios.Workingdo.service';
 
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'crear-usua-workingDog',
   templateUrl: './crear-usua-working-dog.component.html',
-  styleUrls: ['./crear-usua-working-dog.component.css']
+  styleUrls: ['./crear-usua-working-dog.component.css'],
 })
-export class CrearUsuaWorkingDogComponent {
-  addressForm = this.fb.group({
-    company: null,
-    firstName: [null, Validators.required],
-    lastName: [null, Validators.required],
-    address: [null, Validators.required],
-    address2: null,
-    city: [null, Validators.required],
-    state: [null, Validators.required],
-    roles: ['cliente', Validators.required]
+export class CrearUsuaWorkingDogComponent implements OnInit {
+  usuario;
+
+
+  public newUsu = this.fb.group( {
+    nombre: [null, Validators.required],
+    mascota: [null],
+    direccion: [null],
+    telefono: [null, Validators.required],
+    ciudad: [null, Validators.required],
+    rol: ['cliente', Validators.required]
+
   });
 
-  hasUnitNumber = false;
 
-  states = [
-    {name: 'Ecuador', abbreviation: 'ecu'},
-    {name: 'Colombia', abbreviation: 'col'},
+  hasUnitNumber = false;
+  ciudad = [
+    {name: 'Quito', },
+    {name: 'Bogota', },
+    {name: 'Cuenca', },
   ];
 
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    public usuarios: UsuariosServiceWorkingdog,
+    private route: ActivatedRoute,
+    private fb: FormBuilder,
+    private rout: Router,
+  ) {}
 
   // tslint:disable-next-line:typedef
-  onSubmit() {
-    alert('Thanks!');
+  ngOnInit() {
+    this.route.params.subscribe((params: Params) => {
+      const id = params.id;
+    });
+  }
+
+  // tslint:disable-next-line:typedef
+  guardar() {
+      this.usuarios.editUsuarios(this.usuarios.usu);
+
+  }
+
+  // tslint:disable-next-line:typedef
+  create(){
+    this.usuarios.createUsu(this.newUsu.value);
+    this.rout.navigate(['/listaUsuarios']);
   }
 }

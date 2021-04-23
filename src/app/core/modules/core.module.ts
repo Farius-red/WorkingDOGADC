@@ -10,6 +10,7 @@ import { UsuariosServiceWorkingdog } from '../servicios/workingdogADC/usuarios/u
 import { ProductosService } from '../servicios/Zigmainflables/productos/productos.service';
 import { UsuariosServiceZigma } from '../servicios/Zigmainflables/usuarios/usuarios.zigma.service';
 import { SharedZigmaModule } from 'src/app/Zigmainflables/sharedZigmaInflables/shared-zigma.module';
+import { AuthService } from '../servicios/ServiciosCompartidos/auth.service';
 
 @NgModule({
   declarations: [],
@@ -27,7 +28,8 @@ import { SharedZigmaModule } from 'src/app/Zigmainflables/sharedZigmaInflables/s
 
     // zigmainflables
     ProductosService,
-    UsuariosServiceZigma
+    UsuariosServiceZigma,
+    AuthService,
   ]
 })
 export class CoreModule {}

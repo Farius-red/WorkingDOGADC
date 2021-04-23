@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component , OnInit} from '@angular/core';
+import { Observable } from 'rxjs';
+import { AuthService } from 'src/app/core/servicios/ServiciosCompartidos/auth.service';
 
 
 @Component({
@@ -6,9 +8,24 @@ import { Component } from '@angular/core';
   templateUrl: './daskboard.component.html',
   styleUrls: ['./daskboard.component.css']
 })
-export class DaskboardComponent {
-  /** Based on the screen size, switch from standard to one column per row */
+export class DaskboardComponent implements OnInit {
 
+  // tslint:disable-next-line:typedef-whitespace
+  public isLogged = false;
+  public usuario: any;
+  public user$: Observable<any> = this.authSvc.auth.user;
 
-  constructor() {}
+  constructor(private authSvc: AuthService) {
+ }
+
+     // tslint:disable-next-line:typedef
+     async ngOnInit(){
+          this.usuario = await this.authSvc.getCurrentUser();
+          // tslint:disable-next-line:semicolon
+          if (this.usuario){
+            this.isLogged = true;
+            console.log('hola soy dask');
+          }
+    }
+
 }

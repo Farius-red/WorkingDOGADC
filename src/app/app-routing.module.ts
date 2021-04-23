@@ -7,6 +7,8 @@ const routes: Routes = [
     loadChildren: () =>
       import('./auth/login/login.module').then((m) => m.LoginModule),
   },
+
+  // zigma inflables
   {
     path: 'Zigmainflables',
     loadChildren: () =>
@@ -14,6 +16,18 @@ const routes: Routes = [
         (m) => m.IndexZigmaModule
       ),
   },
+
+
+  {
+    path: 'adminZigma',
+    loadChildren: () =>
+      import('./Zigmainflables/admin-zigma/admin-zigma-routing.module').then(
+        (m) => m.AdminZigmaRoutingModule
+      ),
+  },
+
+
+  // working Dog
   {
     path: 'WorkingDogADC',
     loadChildren: () =>
@@ -21,6 +35,7 @@ const routes: Routes = [
         (m) => m.IndexWorkingDogAdcModule
       ),
   },
+
 
   {
     path: 'adminWorkingDog',
@@ -30,10 +45,10 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'adminZigma',
+    path: 'adiestrador',
     loadChildren: () =>
-      import('./Zigmainflables/admin-zigma/admin-zigma-routing.module').then(
-        (m) => m.AdminZigmaRoutingModule
+      import('./workingDog/adiestrador-working-dog/adiestrador-working-dog.module').then(
+        (m) => m.AdiestradorWorkingDogModule
       ),
   },
 ];

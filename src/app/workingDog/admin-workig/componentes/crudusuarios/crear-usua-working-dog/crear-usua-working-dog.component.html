@@ -1,4 +1,5 @@
-<form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+<form [formGroup]="newUsu" >
+
   <mat-card class="shipping-card">
     <mat-card-header>
       <mat-card-title>Crear Usuario</mat-card-title>
@@ -8,63 +9,61 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Nombres" formControlName="firstName">
-            <mat-error *ngIf="addressForm.controls['firstName'].hasError('required')">
-              Nombres  <strong>required</strong>
+            <input matInput placeholder="Nombre"  name="nombre" formControlName="nombre" [(ngModel)]="this.usuarios.usu.nombre">
+            <mat-error *ngIf="newUsu.controls['nombre'].hasError('required')">
+              nombre <strong>required</strong>
             </mat-error>
           </mat-form-field>
         </div>
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Apellidos" formControlName="lastName">
-            <mat-error *ngIf="addressForm.controls['lastName'].hasError('required')">
-              Apellidos <strong>required</strong>
-            </mat-error>
+            <input matInput placeholder="RazaMascota" formControlName="mascota" [(ngModel)]="this.usuarios.usu.mascota">
+
           </mat-form-field>
         </div>
       </div>
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <textarea matInput placeholder="Direccion" formControlName="address"></textarea>
-            <mat-error *ngIf="addressForm.controls['address'].hasError('required')">
-              Direccion <strong>required</strong>
-            </mat-error>
+            <textarea matInput placeholder="Direccion" formControlName="direccion" [(ngModel)]="this.usuarios.usu.direccion" ></textarea>
+
           </mat-form-field>
         </div>
       </div>
-      <div class="row" *ngIf="!hasUnitNumber">
-        <div class="col">
-          <button mat-button color="primary" type="button" (click)="hasUnitNumber = !hasUnitNumber">
-           Click aqui para agregar  agregar Casa o Apartemento #
+       <div class="row" *ngIf="!usuarios.hasUnitNumber">
+         <div class="col">
+          <button class="text-wrap" mat-button color="primary" type="button" (click)="hasUnitNumber = !hasUnitNumber">
+            Click aqui para agregar Casa o Apartemento #
           </button>
         </div>
       </div>
+
       <div class="row" *ngIf="hasUnitNumber">
         <div class="col">
           <mat-form-field class="full-width">
-            <textarea matInput placeholder="Casa o apartamento #" formControlName="address2"></textarea>
+            <textarea matInput placeholder="Casa o apartamento #" formControlName="usuarios.usu.direccion"></textarea>
           </mat-form-field>
         </div>
       </div>
+
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Ciudad" formControlName="city">
-            <mat-error *ngIf="addressForm.controls['city'].hasError('required')">
-              ciudad <strong>required</strong>
+            <input matInput placeholder="Telefono" formControlName="telefono" [(ngModel)]="this.usuarios.usu.telefono" >
+            <mat-error *ngIf="newUsu.controls['telefono'].hasError('required')">
+              telefono <strong>required</strong>
             </mat-error>
           </mat-form-field>
         </div>
         <div class="col">
           <mat-form-field class="full-width">
-            <mat-select placeholder="Pais" formControlName="state">
-              <mat-option *ngFor="let state of states" [value]="state.abbreviation">
-                {{ state.name }}
+            <mat-select placeholder="  Escoje tu ciudad" formControlName="ciudad" >
+              <mat-option  *ngFor="let ciu of ciudad" [value]="ciu.name" >
+                {{ciu.name}}
               </mat-option>
             </mat-select>
-            <mat-error *ngIf="addressForm.controls['state'].hasError('required')">
-              State is <strong>required</strong>
+            <mat-error *ngIf="newUsu.controls['ciudad'].hasError('required')">
+              La ciudad es es un campo obligatorio <strong>required</strong>
             </mat-error>
           </mat-form-field>
         </div>
@@ -72,7 +71,7 @@
 
       <div class="row">
         <div class="col">
-          <mat-radio-group formControlName="roles">
+          <mat-radio-group formControlName="rol">
             <mat-radio-button value="cliente">Cliente</mat-radio-button>
             <mat-radio-button value="peluquero">Peluquero</mat-radio-button>
             <mat-radio-button value="cajero">cajero</mat-radio-button>
@@ -82,8 +81,11 @@
         </div>
       </div>
     </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button color="primary" type="submit">enviar</button>
+    <mat-card-actions class="container text-center">
+      <button mat-raised-button color="warn"  (click)="guardar()" >  <mat-icon>edit</mat-icon> Editar Usuario</button>
+
+      <button mat-raised-button color="primary"  (click)="create()" >  <mat-icon>person_add</mat-icon> Crear Usuario</button>
     </mat-card-actions>
   </mat-card>
 </form>
+

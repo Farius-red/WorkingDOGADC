@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/core/servicios/ServiciosCompartidos/auth.service';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -6,11 +7,21 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './menu-admin-working-dog.component.html',
   styleUrls: ['./menu-admin-working-dog.component.css']
 })
-export class MenuAdminWorkingDogComponent implements OnInit {
+export class MenuAdminWorkingDogComponent implements OnInit{
 
-  constructor() { }
+  public isLogged = false;
 
-  ngOnInit(): void {
+
+  constructor(private authSvc: AuthService) { }
+
+  // tslint:disable-next-line:typedef
+  async ngOnInit() {
+    console.log('navBArModulos');
+    const user = await this.authSvc.getCurrentUser();
+    if (user){
+      this.isLogged = true;
+      console.log('User', user);
+    }
   }
 
 }

@@ -2,8 +2,10 @@
 	<div class="wrapper">
 
 
-    <header-Dask-WorkingDOG></header-Dask-WorkingDOG>
-    <nav-Dask-WorkingDOG></nav-Dask-WorkingDOG>
+    <header-Dask-WorkingDOG [usuario]="usuario" [isLogged]="isLogged" [user$]="user$"></header-Dask-WorkingDOG>
+
+
+    <nav-Dask-WorkingDOG [usuario]="usuario" [isLogged]="isLogged" [user$]="user$"></nav-Dask-WorkingDOG>
 
 
 
@@ -22,9 +24,7 @@
 					<!-- /.box-header -->
 					<div class="box-body">
 						<div class="box">
-							<div class="box-header">
-								<h3 class="box-title">  Aqui titulo de cruds</h3>
-							</div>
+
 							<!-- /.box-header -->
 							<div class="box-body no-padding">
 

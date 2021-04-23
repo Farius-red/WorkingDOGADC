@@ -3,9 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AdminWorkigRoutingModule } from './admin-workig-routing.module';
 
-
-
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DaskAdminComponent } from './dask-admin/dask-admin.component';
 import { ListaClientesComponent } from './componentes/crudusuarios/lista-clientes/lista-clientes.component';
 import { MenuNavegacionContactosComponent } from './componentes/crudusuarios/lista-clientes/menu-navegacion-contactos/menu-navegacion-contactos.component';
@@ -19,6 +17,13 @@ import { ListaServiciosWorkingDogComponent } from './componentes/crudServicios/l
 import { ListaCortesWorkingDogComponent } from './componentes/crudServicios/lista-cortes-working-dog/lista-cortes-working-dog.component';
 import { SharedModule } from '../shared/shared.module';
 import { MaterialModule } from 'src/app/material/material.module';
+// tslint:disable-next-line:max-line-length
+import { PlantillaAdiestramientoComponent } from './componentes/adiestramientos/plantilla-adiestramiento/plantilla-adiestramiento.component';
+import { ListaAdiestramientoComponent } from './componentes/adiestramientos/lista-adiestramiento/lista-adiestramiento.component';
+
+import { ModalDeleteUsuComponent } from './modal-delete-usu/modal-delete-usu.component';
+import { ModalDeleteUComponent } from './componentes/crudusuarios/modal-delete-u/modal-delete-u.component';
+import { ConfirmacionComponent } from './componentes/crudusuarios/confirmacion/confirmacion.component';
 
 @NgModule({
   declarations: [
@@ -31,16 +36,26 @@ import { MaterialModule } from 'src/app/material/material.module';
     NuevoServicioWorkingDogComponent,
     ListaServiciosWorkingDogComponent,
     ListaCortesWorkingDogComponent,
+    PlantillaAdiestramientoComponent,
+    ListaAdiestramientoComponent,
+    ModalDeleteUsuComponent,
+    ModalDeleteUComponent,
+    ConfirmacionComponent,
+
+
   ],
   imports: [
     CommonModule,
     AdminWorkigRoutingModule,
     SharedModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+
+    FormsModule,
   ],
   providers: [],
 
   exports: [],
+  entryComponents: [ModalDeleteUsuComponent, ConfirmacionComponent],
 })
 export class AdminWorkigModule {}
