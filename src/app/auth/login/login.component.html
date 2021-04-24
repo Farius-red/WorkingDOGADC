@@ -1,6 +1,6 @@
 <div class="login-box shadow-lg">
   <!-- /.login-logo -->
-  <div *ngIf="login == false" class="card card-outline card-primary">
+  <div  class="card card-outline card-primary">
     <div class="card-header text-center">
       <b class="h1">Login</b>
     </div>
@@ -62,15 +62,4 @@
   </div>
   <!-- /.card -->
 
-
-
-  <div *ngIf="login == true " class="card">
-    <div class="card-header">
-      <h1>bienvenido {{user.email}}</h1>
-    </div>
-     <div class="card-body">
-
-        <a href="" (click)="cerrarSesion" class="nav-link"> Cerrar Sesion</a>
-     </div>
-  </div>
 </div>

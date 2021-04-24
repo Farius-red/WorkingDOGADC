@@ -10,7 +10,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireStorageModule } from '@angular/fire/storage';
-import { environment } from 'src/environments/environment';
+import { datosfire, environment } from 'src/environments/environment';
 
 // modulos
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -28,6 +28,9 @@ import { IndexWorkingDogAdcModule } from './workingDog/index-working-dog-adc/ind
 import { LoginModule } from './auth/login/login.module';
 import { AdminWorkigModule } from './workingDog/admin-workig/admin-workig.module';
 import { SharedModule } from './workingDog/shared/shared.module';
+import { AdiestradorWorkingDogModule } from './workingDog/adiestrador-working-dog/adiestrador-working-dog.module';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -38,7 +41,7 @@ import { SharedModule } from './workingDog/shared/shared.module';
 
     // fire base
 
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebase, datosfire.firebaseWorkingDOG),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     AngularFireStorageModule,
@@ -53,15 +56,18 @@ import { SharedModule } from './workingDog/shared/shared.module';
     IndexWorkingDogAdcModule,
     AdminWorkigModule,
     SharedModule,
+    AdiestradorWorkingDogModule,
 
     CoreModule,
 
 
     // login modulo
-     LoginModule
+     LoginModule,
+     FormsModule,
   ],
 
   providers: [CoreModule],
   bootstrap: [AppComponent],
+
 })
 export class AppModule {}

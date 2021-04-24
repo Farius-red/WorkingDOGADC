@@ -27,6 +27,7 @@ const routes: Routes = [
       //  Crud Usuarios
       { path: 'listaUsuarios', component: ListaClientesComponent },
       { path: 'crearUsuario', component: CrearUsuaWorkingDogComponent },
+      { path: 'crearUsuario/:id', component: CrearUsuaWorkingDogComponent },
       // Crud Productos
       { path: 'listaProductos', component: ListaProductWorkingDogComponent },
       { path: 'CrearProductos', component: CrearProductWorkingDogComponent },

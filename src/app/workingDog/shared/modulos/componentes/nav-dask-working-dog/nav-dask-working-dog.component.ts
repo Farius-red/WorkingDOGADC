@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -8,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavDaskWorkingDOGComponent implements OnInit {
 
+ @Input() usuario: any;
+ @Input() isLogged;
+ @Input() user$;
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  // tslint:disable-next-line:typedef
+  ngOnInit() { }
+
 
 }

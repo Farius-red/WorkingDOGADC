@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'crear-product-workingDog',
   templateUrl: './crear-product-working-dog.component.html',
   styleUrls: ['./crear-product-working-dog.component.css']
@@ -87,6 +88,7 @@ export class CrearProductWorkingDogComponent {
 
   constructor(private fb: FormBuilder) {}
 
+  // tslint:disable-next-line:typedef
   onSubmit() {
     alert('Thanks!');
   }

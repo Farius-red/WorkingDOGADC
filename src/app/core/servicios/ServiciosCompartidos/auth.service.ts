@@ -9,6 +9,7 @@ import { first } from 'rxjs/operators';
 })
 export class AuthService {
   constructor(public auth: AngularFireAuth, public fs: AngularFirestore) {}
+
   // tslint:disable-next-line:typedef
   async login(email: string, clave: string) {
     try {
@@ -35,9 +36,8 @@ export class AuthService {
   async logout() {
     try {
       await this.auth.signOut();
-
     } catch (error) {
-       console.log(error);
+      console.log(error);
     }
   }
 
