@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 
 import { RegistroRoutingModule } from './registro-routing.module';
 import { RegistroComponent } from './registro.component';
-import { SharedZigmaModule } from 'src/app/sharedZigmaInflables/shared-zigma.module';
+import { SharedZigmaModule } from 'src/app/Zigmainflables/sharedZigmaInflables/shared-zigma.module';
 
 
 @NgModule({

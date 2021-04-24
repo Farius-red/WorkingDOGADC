@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login.component';
-import { SharedZigmaModule } from 'src/app/sharedZigmaInflables/shared-zigma.module';
+import { SharedZigmaModule } from 'src/app/Zigmainflables/sharedZigmaInflables/shared-zigma.module';
 
 
 @NgModule({

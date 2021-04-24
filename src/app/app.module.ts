@@ -10,22 +10,27 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireStorageModule } from '@angular/fire/storage';
-import { environment } from 'src/environments/environment';
+import { datosfire, environment } from 'src/environments/environment';
 
 // modulos
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/modules/core.module';
 
 // modulos zigma
-import { SharedZigmaModule } from './sharedZigmaInflables/shared-zigma.module';
-import { IndexZigmaModule } from './indexZigmainflables/index-zigma.module';
-import { AdminZigmaModule } from './admin-zigma/admin-zigma.module';
+import { SharedZigmaModule } from './Zigmainflables/sharedZigmaInflables/shared-zigma.module';
+import { IndexZigmaModule } from './Zigmainflables/indexZigmainflables/index-zigma.module';
+import { AdminZigmaModule } from './Zigmainflables/admin-zigma/admin-zigma.module';
 
 // modulos WorkingDOGADC
-import { SharedModule } from './shared/shared.module';
-import { IndexWorkingDogAdcModule } from './index-working-dog-adc/index-working-dog-adc.module';
-import { AdminWorkigModule } from './admin-workig/admin-workig.module';
+
+import { IndexWorkingDogAdcModule } from './workingDog/index-working-dog-adc/index-working-dog-adc.module';
+
 import { LoginModule } from './auth/login/login.module';
+import { AdminWorkigModule } from './workingDog/admin-workig/admin-workig.module';
+import { SharedModule } from './workingDog/shared/shared.module';
+import { AdiestradorWorkingDogModule } from './workingDog/adiestrador-working-dog/adiestrador-working-dog.module';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -36,7 +41,7 @@ import { LoginModule } from './auth/login/login.module';
 
     // fire base
 
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebase, datosfire.firebaseWorkingDOG),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     AngularFireStorageModule,
@@ -51,15 +56,18 @@ import { LoginModule } from './auth/login/login.module';
     IndexWorkingDogAdcModule,
     AdminWorkigModule,
     SharedModule,
+    AdiestradorWorkingDogModule,
 
     CoreModule,
 
 
     // login modulo
-     LoginModule
+     LoginModule,
+     FormsModule,
   ],
 
   providers: [CoreModule],
   bootstrap: [AppComponent],
+
 })
 export class AppModule {}

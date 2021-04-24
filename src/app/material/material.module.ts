@@ -24,8 +24,9 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-
-
+import {MatTreeModule} from '@angular/material/tree';
+import {MatDialogModule} from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [],
@@ -51,7 +52,10 @@ import { MatSortModule } from '@angular/material/sort';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-
+    MatTreeModule,
+    MatRadioModule,
+    MatDialogModule,
+    MatSnackBarModule,
   ],
   exports: [
     // form
@@ -73,8 +77,9 @@ import { MatSortModule } from '@angular/material/sort';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-
-
+    MatTreeModule,
+    MatDialogModule,
+    MatSnackBarModule,
   ],
 })
 export class MaterialModule {}

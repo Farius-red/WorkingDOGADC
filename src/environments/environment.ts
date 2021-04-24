@@ -11,3 +11,15 @@ export const environment = {
     measurementId: 'G-G3SC1N58X9',
   },
 };
+export const datosfire = {
+  firebaseWorkingDOG: {
+    apiKey: 'AIzaSyD9f-7PyCvKHjmz265LeuPJG8QIqpjTJDA',
+    authDomain: 'workingdog-5d13c.firebaseapp.com',
+    databaseURL: 'https://workingdog-5d13c-default-rtdb.firebaseio.com',
+    projectId: 'workingdog-5d13c',
+    storageBucket: 'workingdog-5d13c.appspot.com',
+    messagingSenderId: '143303341483',
+    appId: '1:143303341483:web:b07ad67e92dea13d0f4eee',
+    measurementId: 'G-ZEK3N09T2J',
+  },
+};
