@@ -28,16 +28,25 @@ import { ConfirmacionComponent } from './componentes/crudusuarios/confirmacion/c
 @NgModule({
   declarations: [
     DaskAdminComponent,
+
+// crud usuarios
     ListaClientesComponent,
     MenuNavegacionContactosComponent,
     CrearUsuaWorkingDogComponent,
+// crud productos
+
     CrearProductWorkingDogComponent,
     ListaProductWorkingDogComponent,
+
+    // crud servicios
     NuevoServicioWorkingDogComponent,
     ListaServiciosWorkingDogComponent,
     ListaCortesWorkingDogComponent,
+
     PlantillaAdiestramientoComponent,
     ListaAdiestramientoComponent,
+
+    // modales
     ModalDeleteUsuComponent,
     ModalDeleteUComponent,
     ConfirmacionComponent,

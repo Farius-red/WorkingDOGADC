@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
       const user = await this.autSvc.login(email, clave);
       if (user) {
         // redireccion a modulo
-        this.router.navigate(['/adminWorkingDog']);
+        this.router.navigate(['/adminWorkingDog/listaUsuarios']);
       }
     } catch (error) {
       console.log(error);

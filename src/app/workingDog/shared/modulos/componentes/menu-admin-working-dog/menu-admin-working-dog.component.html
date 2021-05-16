@@ -1,12 +1,12 @@
+
+
 <ul class="sidebar-menu tree" data-widget="tree">
   <li class="header">Gestion Clientes y productos</li>
 
   <li class="treeview">
-    <a href="#">
-      <i class="fa fa-address-book"></i>
-      <span>Gestion Usuarios</span>
-    </a>
-    <ul class="treeview-menu">
+<button mat-button color='primary' [matMenuTriggerFor]="aboveMenu">Gestion Clientes</button>
+<mat-menu #aboveMenu="matMenu" Position="above">
+    <ul mat-menu-item class="treeview-menu">
       <li>
         <a routerLink="/adminWorkingDog/crearUsuario"><i class="fa fa-circle-o"></i>
           Crear</a>
@@ -17,6 +17,8 @@
           Listar</a>
       </li>
     </ul>
+</mat-menu>
+
   </li>
   <li class="treeview">
     <a href="#">

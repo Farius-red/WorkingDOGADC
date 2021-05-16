@@ -1,11 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import { AuthGuard } from './core/guard/auth.guard';
 
 const routes: Routes = [
+
+   { path: '',   redirectTo: '/WorkingDogADC/inicio', pathMatch: 'full' },
   {
-    path: '',
+    path: 'login',
     loadChildren: () =>
       import('./auth/login/login.module').then((m) => m.LoginModule),
+  },
+  // working Dog
+  {
+    path: 'WorkingDogADC',
+    loadChildren: () =>
+      import('./workingDog/index-working-dog-adc/index-working-dog-adc.module').then(
+        (m) => m.IndexWorkingDogAdcModule
+      ),
   },
 
   // zigma inflables
@@ -27,14 +38,6 @@ const routes: Routes = [
   },
 
 
-  // working Dog
-  {
-    path: 'WorkingDogADC',
-    loadChildren: () =>
-      import('./workingDog/index-working-dog-adc/index-working-dog-adc.module').then(
-        (m) => m.IndexWorkingDogAdcModule
-      ),
-  },
 
 
   {

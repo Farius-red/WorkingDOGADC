@@ -16,16 +16,21 @@ export class DaskboardComponent implements OnInit {
   public user$: Observable<any> = this.authSvc.auth.user;
 
   constructor(private authSvc: AuthService) {
- }
 
-     // tslint:disable-next-line:typedef
-     async ngOnInit(){
-          this.usuario = await this.authSvc.getCurrentUser();
-          // tslint:disable-next-line:semicolon
-          if (this.usuario){
-            this.isLogged = true;
-            console.log('hola soy dask');
-          }
-    }
+  }
 
+  // tslint:disable-next-line:typedef
+  async ngOnInit() {
+    //  try {
+    //
+    //     this.usuario = await this.authSvc.getCurrentUser();
+    //     if (this.usuario){
+    //       this.isLogged = true;
+    //     }
+    //
+    //   } catch (error) {
+    //     console.log(error);
+    //   }
+    //  }
+  }
 }
