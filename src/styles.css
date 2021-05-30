@@ -1,13 +1,19 @@
-
 :root {
   /* cabecera*/
   /* colores zigma */
   --color-zigma: #ffe009;
-
   --color-textosZigma: #ef6c00;
-}
-.body {
-  background-color: #007bff0f !important ;
+
+  /* dakboard workingDog*/
+  --width: 300px;
+  --padding: 10px;
+  --bgcolor: repeating-linear-gradient(
+    90deg,
+    rgb(0, 238, 255),
+    rgb(0, 38, 255)
+  );
+  --hovercolor: rgb(4, 44, 177);
+  --width--collapsed: 50px;
 }
 
 .Spam {
@@ -69,10 +75,6 @@
 }
 
 html,
-body {
-  height: 100%;
-}
-
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;

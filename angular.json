@@ -24,8 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/admin/css/AdminLTE.min.css",
-              "src/assets/admin/skins/_all-skins.min.css",
+               "src/assets/admin/css/AdminLTE.min.css",
               "src/assets/admin/css/custom.css",
               "src/assets/admin/css/login.css",
               "src/custom-theme.scss",
