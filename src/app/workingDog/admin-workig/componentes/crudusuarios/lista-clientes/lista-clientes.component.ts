@@ -11,7 +11,7 @@ import { ModalDeleteUComponent } from '../modal-delete-u/modal-delete-u.componen
 
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ConfirmacionComponent } from '../confirmacion/confirmacion.component';
-import { ModalDeleteUsuComponent } from '../../../modal-delete-usu/modal-delete-usu.component';
+
 
 @Component({
   // tslint:disable-next-line:component-selector

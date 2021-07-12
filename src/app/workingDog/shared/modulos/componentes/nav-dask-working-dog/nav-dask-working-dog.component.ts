@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { AuthService } from 'src/app/core/servicios/ServiciosCompartidos/auth.service';
 
 
 @Component({
@@ -11,8 +12,13 @@ export class NavDaskWorkingDOGComponent implements OnInit {
 
  @Input() usuario: any;
  @Input() isLogged;
- @Input() user$;
-  constructor() { }
+  @Input() user$;
+
+  public log;
+  constructor() {
+
+
+  }
 
   // tslint:disable-next-line:typedef
   ngOnInit() { }

@@ -47,14 +47,13 @@ import { FormsModule } from '@angular/forms';
     AngularFireStorageModule,
     AngularFireAuthModule,
 
+        // modulos Working
+    IndexWorkingDogAdcModule,
+    AdminWorkigModule,
     // modulos Zigma
     IndexZigmaModule,
     AdminZigmaModule,
     SharedZigmaModule,
-
-    // modulos Working
-    IndexWorkingDogAdcModule,
-    AdminWorkigModule,
     SharedModule,
     AdiestradorWorkingDogModule,
 

@@ -17,6 +17,7 @@ import { DaskboardComponent } from './modulos/componentes/daskboard/daskboard.co
 import { HeaderDaskWorkingDOGComponent } from './modulos/componentes/header-dask-working-dog/header-dask-working-dog.component';
 import { NavDaskWorkingDOGComponent } from './modulos/componentes/nav-dask-working-dog/nav-dask-working-dog.component';
 import { MenuAdminWorkingDogComponent } from './modulos/componentes/menu-admin-working-dog/menu-admin-working-dog.component';
+import { LinksDasboardComponent } from './modulos/componentes/links-dasboard/links-dasboard.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { MenuAdminWorkingDogComponent } from './modulos/componentes/menu-admin-w
     HeaderDaskWorkingDOGComponent,
     NavDaskWorkingDOGComponent,
     MenuAdminWorkingDogComponent,
+    LinksDasboardComponent,
   ],
   imports: [CommonModule, LayoutModule, MaterialModule, RouterModule],
 

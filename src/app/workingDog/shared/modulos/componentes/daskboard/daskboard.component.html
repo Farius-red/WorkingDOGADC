@@ -1,50 +1,36 @@
-<body class="hold-transition skin-blue sidebar-mini">
-	<div class="wrapper">
+<div class="container d-flex align-content-around">
+  <div id="sidemenu" [ngClass]="expandir">
+    <div id="header">
+      <div id="menu-btn">
+        <mat-icon class="pulse btnmenu" (click)="expanded()"> reorder</mat-icon>
+      </div>
+      <!-- <a (click)="cerrarSesion()" class="btn btn-default btn-primary">Cerrar
+        sesion</a>  -->
+    </div>
 
+    <!-- profile -->
+    <div id="profile">
+      <div id="photo"><img src="#" alt="" /></div>
+      <div id="name"><span>bienvenido</span></div>
+    </div>
+    <!--menus XD -->
+    <div id="menu-items">
+      <div class="item">
+        <a routerLink="listaUsuarios">
+          <div class="icon">
+            <i class="fa fa-address-book-o"></i>
+          </div>
+          <div id="title"><span>Usuarios</span></div>
+        </a>
+      </div>
+    </div>
 
-    <header-Dask-WorkingDOG [usuario]="usuario" [isLogged]="isLogged" [user$]="user$"></header-Dask-WorkingDOG>
+    <div class="item separator"></div>
+  </div>
 
-
-    <nav-Dask-WorkingDOG [usuario]="usuario" [isLogged]="isLogged" [user$]="user$"></nav-Dask-WorkingDOG>
-
-
-
-
-		<!-- Content Wrapper. Contains page content -->
-		<div class="content-wrapper">
-
-
-
-			<!-- Main content -->
-			<section class="content">
-				<div class="box">
-					<div class="box-header">
-
-					</div>
-					<!-- /.box-header -->
-					<div class="box-body">
-						<div class="box">
-
-							<!-- /.box-header -->
-							<div class="box-body no-padding">
-
-                <router-outlet></router-outlet>
-
-							</div>
-							<!-- /.box-body -->
-						</div>
-					</div>
-					<!-- /.box-body -->
-				</div>
-			</section>
-			<!-- /.content -->
-		</div>
-		<!-- /.content-wrapper -->
+  <div [ngClass]="bodyExpanded" id="main-container">
+    <!-- Aqui contenido-->
+    <router-outlet></router-outlet>
     <app-footerworkingD></app-footerworkingD>
-		<div class="control-sidebar-bg"></div>
-	</div>
-	<!-- ./wrapper -->
-
-
-
-</body>
+  </div>
+</div>

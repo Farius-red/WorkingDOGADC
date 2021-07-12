@@ -19,7 +19,7 @@ const routes: Routes = [
 
     children: [
       {
-        path: 'Zigmainflables',
+        path: '',
         redirectTo: 'Zigmainflables/inicio',
         pathMatch: 'prefix',
       },

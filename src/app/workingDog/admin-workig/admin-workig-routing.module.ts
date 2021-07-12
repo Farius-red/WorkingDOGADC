@@ -14,11 +14,13 @@ import { CrearProductWorkingDogComponent } from './componentes/crudProductos/cre
 import { NuevoServicioWorkingDogComponent } from './componentes/crudServicios/nuevo-servicio-working-dog/nuevo-servicio-working-dog.component';
 import { ListaServiciosWorkingDogComponent } from './componentes/crudServicios/lista-servicios-working-dog/lista-servicios-working-dog.component';
 import { ListaCortesWorkingDogComponent } from './componentes/crudServicios/lista-cortes-working-dog/lista-cortes-working-dog.component';
+import { AuthGuard } from 'src/app/core/guard/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
     component: DaskAdminComponent,
+
     children: [
       {
         path: '',

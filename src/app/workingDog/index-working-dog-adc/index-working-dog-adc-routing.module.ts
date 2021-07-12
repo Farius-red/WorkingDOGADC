@@ -11,9 +11,9 @@ const routes: Routes = [
     component: PlantillaIndexWorkingDogAdcComponent,
     children: [
       {
-        path: 'Zigmainflables',
+        path: '',
         redirectTo: 'WorkingDogADC/inicio',
-        pathMatch: 'prefix',
+        pathMatch: 'full',
       },
 
       {

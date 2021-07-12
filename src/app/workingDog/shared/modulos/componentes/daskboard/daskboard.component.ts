@@ -1,4 +1,5 @@
-import { Component , OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthService } from 'src/app/core/servicios/ServiciosCompartidos/auth.service';
 
@@ -15,17 +16,48 @@ export class DaskboardComponent implements OnInit {
   public usuario: any;
   public user$: Observable<any> = this.authSvc.auth.user;
 
-  constructor(private authSvc: AuthService) {
- }
+  // para diseño
 
-     // tslint:disable-next-line:typedef
-     async ngOnInit(){
-          this.usuario = await this.authSvc.getCurrentUser();
-          // tslint:disable-next-line:semicolon
-          if (this.usuario){
-            this.isLogged = true;
-            console.log('hola soy dask');
-          }
+  public btn = document.querySelector('#menu-btn');
+  public expandir = 'menu-collapsed';
+  public bodyExpanded = 'body-peque';
+
+  constructor(private authSvc: AuthService, private router: Router) {
+
+  }
+
+  ngOnInit(): void {
+    this.bodyExpanded = 'body-peque';
+  }
+
+
+  // tslint:disable-next-line:typedef
+  expanded() {
+    switch (this.expandir) {
+      case 'menu-collapsed':
+        this.expandir = 'menu-expanded';
+
+        this.bodyExpanded = 'body-expanded';
+        break;
+      case 'menu-expanded':
+        this.expandir = 'menu-collapsed';
+        this.bodyExpanded = 'body-peque';
+        break;
+      default:
+        break;
     }
+  }
 
+  // tslint:disable-next-line:typedef
+  async cerrarSesion() {
+    this.authSvc.logout();
+
+    try {
+      console.log('clic en cerrar sesion');
+      this.router.navigate(['/WorkingDogADC/inicio']);
+
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
