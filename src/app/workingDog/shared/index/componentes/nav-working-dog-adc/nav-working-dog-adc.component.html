@@ -1,46 +1,69 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
     <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list >
-      <a mat-list-item routerLink="/WorkingDogADC/inicio" routerLinkActive="active"> <mat-icon>home</mat-icon>Inicio</a>
-      <a mat-list-item routerLink="/WorkingDogADC/login" routerLinkActive="active"> <mat-icon>login</mat-icon>login </a>
-      <a mat-list-item routerLink="/WorkingDogADC/registro" routerLinkActive="active"> <mat-icon>person_add</mat-icon>registrarse </a>
-      <a mat-list-item href="#"> <mat-icon>pets</mat-icon>Adiestramiento Canino</a>
+    <mat-nav-list style="background: var(--bgcolor)">
+      <a
+        mat-list-item
+        routerLink="/WorkingDogADC/inicio"
+        routerLinkActive="active"
+      >
+        <mat-icon>home</mat-icon>Inicio</a
+      >
+      <a
+        mat-list-item
+        routerLink="/WorkingDogADC/login"
+        routerLinkActive="active"
+      >
+        <mat-icon>login</mat-icon>login
+      </a>
+      <a
+        mat-list-item
+        routerLink="/WorkingDogADC/registro"
+        routerLinkActive="active"
+      >
+        <mat-icon>person_add</mat-icon>registrarse
+      </a>
+      <a mat-list-item href="#">
+        <mat-icon>pets</mat-icon>Adiestramiento Canino</a
+      >
       <a mat-list-item href="#"> <mat-icon>pets</mat-icon>peluqueria</a>
       <a mat-list-item href="#"> <mat-icon>favorite</mat-icon>Citas caninas</a>
       <a mat-list-item href="#"> <mat-icon>pets</mat-icon>Petshop </a>
       <a mat-list-item href="#"> <mat-icon>pets</mat-icon>Guarderia Canina</a>
-
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar  color="primary">
+    <mat-toolbar style="background: var(--bgcolor)">
       <button
         type="button"
         aria-label="Toggle sidenav"
         mat-icon-button
         (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
+        *ngIf="isHandset$ | async"
+      >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>WorkingdogADC</span>
-      <span class="espacionav">
-      </span>
+      <span class="espacionav"> </span>
 
-        <button mat-icon-button  aria-label="Example icon-button with heart icon">
+      <button mat-icon-button aria-label="Example icon-button with heart icon">
+        <mat-icon>login</mat-icon>
+      </button>
 
-           <mat-icon>login</mat-icon>
-        </button>
-
-
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-          <mat-icon>person_add</mat-icon>
-        </button>
-
+      <button
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with share icon"
+      >
+        <mat-icon>person_add</mat-icon>
+      </button>
     </mat-toolbar>
-
   </mat-sidenav-content>
 </mat-sidenav-container>

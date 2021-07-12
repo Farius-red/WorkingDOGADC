@@ -1,11 +1,6 @@
-
 <div class="container d-flex align-content-around">
-
   <div id="sidemenu" [ngClass]="expandir">
-
-
     <div id="header">
-
       <div id="menu-btn">
         <mat-icon class="pulse btnmenu" (click)="expanded()"> reorder</mat-icon>
       </div>
@@ -13,37 +8,27 @@
         sesion</a>  -->
     </div>
 
-
     <!-- profile -->
     <div id="profile">
-
-      <div id="photo"><img src="#" alt=""></div>
-      <div id="name"><span>daniel</span></div>
-
-
+      <div id="photo"><img src="#" alt="" /></div>
+      <div id="name"><span>bienvenido</span></div>
     </div>
     <!--menus XD -->
     <div id="menu-items">
       <div class="item">
-        <a href="#">
-
+        <a routerLink="listaUsuarios">
           <div class="icon">
             <i class="fa fa-address-book-o"></i>
           </div>
           <div id="title"><span>Usuarios</span></div>
-
         </a>
       </div>
     </div>
 
     <div class="item separator"></div>
-
-
   </div>
 
-  <div [ngClass]="bodyExpanded"
-    id="main-container">
-
+  <div [ngClass]="bodyExpanded" id="main-container">
     <!-- Aqui contenido-->
     <router-outlet></router-outlet>
     <app-footerworkingD></app-footerworkingD>
